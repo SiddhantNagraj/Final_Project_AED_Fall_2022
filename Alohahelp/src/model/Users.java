@@ -13,6 +13,7 @@ public class Users {
      private String userName;
     private String password;
     private Person person; 
+
     private Roles role;
     private WorkQueue workQueue;
     private boolean enabled = true;
@@ -47,6 +48,7 @@ public class Users {
     }
 
     public void setRole(Roles role) {
+
         this.role = role;
     }
 
@@ -71,6 +73,7 @@ public class Users {
     }
 
     public void setNetwork(Networks network) {
+
         this.network = network;
     }
     

@@ -15,8 +15,6 @@ public class DonationRequest extends WorkRequest{
     private static int count = 000;
     private Donation donation;
     
-    
-
 
     public String getDonatedBy() {
         return donatedBy;
