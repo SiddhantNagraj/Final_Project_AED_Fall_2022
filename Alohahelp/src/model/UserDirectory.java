@@ -11,13 +11,13 @@ import java.util.ArrayList;
  * @author shiba
  */
 public class UserDirectory {
-    private ArrayList<UserAccount> userAccountList;
+    private ArrayList<Users> userAccountList;
 
-    public ArrayList<UserAccount> getUserAccountList() {
+    public ArrayList<Users> getUserAccountList() {
         return userAccountList;
     }
 
-    public void setUserAccountList(ArrayList<UserAccount> userAccountList) {
+    public void setUserAccountList(ArrayList<Users> userAccountList) {
         this.userAccountList = userAccountList;
     }
     

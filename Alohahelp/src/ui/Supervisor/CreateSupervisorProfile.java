@@ -6,7 +6,7 @@ package ui.Supervisor;
 
 /**
  *
- * @author shiba
+ * @author Siddhant
  */
 public class CreateSupervisorProfile extends javax.swing.JPanel {
 
@@ -25,6 +25,7 @@ public class CreateSupervisorProfile extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+
 
         manageEnt = new javax.swing.JLabel();
         createYourProfile = new javax.swing.JLabel();
@@ -86,10 +87,8 @@ public class CreateSupervisorProfile extends javax.swing.JPanel {
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+
+
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -261,5 +260,5 @@ public class CreateSupervisorProfile extends javax.swing.JPanel {
     private javax.swing.JTextField townField;
     private javax.swing.JLabel zipCode;
     private javax.swing.JTextField zipCodeField;
-    // End of variables declaration//GEN-END:variables
+   // End of variables declaration//GEN-END:variables
 }
