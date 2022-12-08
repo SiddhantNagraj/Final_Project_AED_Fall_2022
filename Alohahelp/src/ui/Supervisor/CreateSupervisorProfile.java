@@ -26,19 +26,239 @@ public class CreateSupervisorProfile extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1125, Short.MAX_VALUE)
+
+        manageEnt = new javax.swing.JLabel();
+        createYourProfile = new javax.swing.JLabel();
+        donorName = new javax.swing.JLabel();
+        supNameField = new javax.swing.JTextField();
+        dateOfBirth = new javax.swing.JLabel();
+        supDobField = new javax.swing.JFormattedTextField();
+        address = new javax.swing.JLabel();
+        supaddressField = new javax.swing.JTextField();
+        town = new javax.swing.JLabel();
+        townField = new javax.swing.JTextField();
+        occupation = new javax.swing.JLabel();
+        occupationField = new javax.swing.JTextField();
+        emailID = new javax.swing.JLabel();
+        emailIDField = new javax.swing.JTextField();
+        zipCode = new javax.swing.JLabel();
+        zipCodeField = new javax.swing.JTextField();
+        phoneNumber = new javax.swing.JLabel();
+        phoneNumberField = new javax.swing.JTextField();
+        backJButton = new javax.swing.JButton();
+        createProfileButton = new javax.swing.JButton();
+
+        manageEnt.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 36)); // NOI18N
+        manageEnt.setText("Supervisor Work Area");
+
+        createYourProfile.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        createYourProfile.setText("Create Your Profile");
+
+        donorName.setText("Full Name:");
+
+        supNameField.setEditable(false);
+        supNameField.setEnabled(false);
+
+        dateOfBirth.setText("Date Of Birth (MM/DD/YYYY):");
+
+        address.setText("Address: ");
+
+        town.setText("Town/City: ");
+
+        occupation.setText("Occupation:");
+
+        emailID.setText("Email Address:");
+
+        zipCode.setText("Zip Code:");
+
+        phoneNumber.setText("Phone Number:");
+
+        backJButton.setText("<< back");
+        backJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backJButtonActionPerformed(evt);
+            }
+        });
+
+        createProfileButton.setText("Create Profile ");
+        createProfileButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createProfileButtonActionPerformed(evt);
+            }
+        });
+
+
+
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(170, 170, 170)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(dateOfBirth, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(address, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(town))
+                            .addComponent(occupation)
+                            .addComponent(emailID, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(donorName, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(zipCode, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(phoneNumber))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(supDobField, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                            .addComponent(zipCodeField)
+                            .addComponent(townField)
+                            .addComponent(occupationField)
+                            .addComponent(emailIDField)
+                            .addComponent(supaddressField, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                            .addComponent(supNameField, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                            .addComponent(phoneNumberField)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(createYourProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(manageEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(backJButton)
+                        .addGap(38, 383, Short.MAX_VALUE)
+                        .addComponent(createProfileButton, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(418, 418, 418))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 839, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(manageEnt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addComponent(createYourProfile)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(donorName)
+                    .addComponent(supNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dateOfBirth)
+                    .addComponent(supDobField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(address)
+                    .addComponent(supaddressField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(town)
+                    .addComponent(townField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(occupation))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(occupationField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(emailID)
+                    .addComponent(emailIDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(zipCodeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(zipCode))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(phoneNumber)
+                    .addComponent(phoneNumberField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(createProfileButton)
+                    .addComponent(backJButton))
+                .addGap(21, 21, 21))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+
+//        userProcessContainer.remove(this);
+//        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+//        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_backJButtonActionPerformed
+
+    private void createProfileButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createProfileButtonActionPerformed
+//        Person person = userAccount.getPerson();
+//        if( supaddressField.getText()==null || supaddressField.getText().trim().isEmpty() ||
+//            townField.getText()==null || townField.getText().trim().isEmpty() ||
+//            occupationField.getText()==null || occupationField.getText().trim().isEmpty() ||
+//            emailIDField.getText()==null || emailIDField.getText().trim().isEmpty() ||
+//            phoneNumberField.getText()==null || phoneNumberField.getText().trim().isEmpty() ||
+//            supDobField.getText()==null || supDobField.getText().trim().isEmpty() ||
+//            zipCodeField.getText()==null || zipCodeField.getText().trim().isEmpty() )
+//        {
+//            JOptionPane.showMessageDialog(null, "Please Enter data in all fields");
+//            return;
+//        }
+//        try
+//        {
+//            DateFormat dateFormat =  new SimpleDateFormat("MM/dd/yyyy");
+//            Date date = new Date();
+//            Date dob =  dateFormat.parse(supDobField.getText());
+//            if(dob.after(date) || dob.equals(date))
+//            {
+//                JOptionPane.showMessageDialog(null, "Please Enter valid Date of Birth");
+//                return;
+//            }
+//
+//            person.setDob(dateFormat.parse(supDobField.getText()));
+//            person.setAddress1(supaddressField.getText());
+//            person.setTown(townField.getText());
+//            person.setOccupation(occupationField.getText());
+//            person.setZipCode(zipCodeField.getText());
+//            person.setEmailId(emailIDField.getText());
+//            person.setPhoneNumber(phoneNumberField.getText());
+//
+//            JOptionPane.showMessageDialog(null, "Your Profile has been created successfully", "success", JOptionPane.PLAIN_MESSAGE);
+//            resetFields();
+//        }
+//        catch(ParseException pe)
+//        {
+//            JOptionPane.showMessageDialog(null, "Please Enter valid date of Birth!");
+//            return;
+//        }
+//        catch(NumberFormatException nfe)
+//        {
+//            JOptionPane.showMessageDialog(null, "Please Enter valid number!");
+//            return;
+//        }
+//        catch(Exception e)
+//        {
+//            JOptionPane.showMessageDialog(null, "Please Enter valid data in all the fields");
+//            return;
+//        }
+    }//GEN-LAST:event_createProfileButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    // End of variables declaration//GEN-END:variables
+    private javax.swing.JLabel address;
+    private javax.swing.JButton backJButton;
+    private javax.swing.JButton createProfileButton;
+    private javax.swing.JLabel createYourProfile;
+    private javax.swing.JLabel dateOfBirth;
+    private javax.swing.JLabel donorName;
+    private javax.swing.JLabel emailID;
+    private javax.swing.JTextField emailIDField;
+    private javax.swing.JLabel manageEnt;
+    private javax.swing.JLabel occupation;
+    private javax.swing.JTextField occupationField;
+    private javax.swing.JLabel phoneNumber;
+    private javax.swing.JTextField phoneNumberField;
+    private javax.swing.JFormattedTextField supDobField;
+    private javax.swing.JTextField supNameField;
+    private javax.swing.JTextField supaddressField;
+    private javax.swing.JLabel town;
+    private javax.swing.JTextField townField;
+    private javax.swing.JLabel zipCode;
+    private javax.swing.JTextField zipCodeField;
+   // End of variables declaration//GEN-END:variables
 }
