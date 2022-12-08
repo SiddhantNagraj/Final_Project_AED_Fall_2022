@@ -13,10 +13,11 @@ public class Users {
      private String userName;
     private String password;
     private Person person; 
-    private Role role;
+
+    private Roles role;
     private WorkQueue workQueue;
     private boolean enabled = true;
-    private Network network;
+    private Networks network;
 
     public String getUserName() {
         return userName;
@@ -42,11 +43,12 @@ public class Users {
         this.person = person;
     }
 
-    public Role getRole() {
+    public Roles getRole() {
         return role;
     }
 
-    public void setRole(Role role) {
+    public void setRole(Roles role) {
+
         this.role = role;
     }
 
@@ -66,11 +68,12 @@ public class Users {
         this.enabled = enabled;
     }
 
-    public Network getNetwork() {
+    public Networks getNetwork() {
         return network;
     }
 
-    public void setNetwork(Network network) {
+    public void setNetwork(Networks network) {
+
         this.network = network;
     }
     

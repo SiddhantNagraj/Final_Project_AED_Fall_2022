@@ -13,11 +13,8 @@ public class DonationRequest extends WorkRequest{
     private String donatedBy;
     private String requestId;
     private static int count = 000;
-    private Donation donation;{
+    private Donation donation;
     
-    
-    
-}
 
     public String getDonatedBy() {
         return donatedBy;
@@ -50,3 +47,4 @@ public class DonationRequest extends WorkRequest{
     public void setDonation(Donation donation) {
         this.donation = donation;
     }
+}

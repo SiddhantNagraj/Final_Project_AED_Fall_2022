@@ -18,7 +18,7 @@ public class HelpSeeker  extends Person{
     private boolean hasSensorDevice = false;
     private boolean hasCardiacProb = false;
     private boolean getAlerts = false;
-    private ArrayList<VitalSign> vitalSignList;
+    private ArrayList<VitalSigns> vitalSignList;
     private ArrayList<String> vitalSignTrackList;
     private boolean sendDataToDoctor = false;
     private SensorDevice sensorDevice;
@@ -71,11 +71,11 @@ public class HelpSeeker  extends Person{
         this.getAlerts = getAlerts;
     }
 
-    public ArrayList<VitalSign> getVitalSignList() {
+    public ArrayList<VitalSigns> getVitalSignList() {
         return vitalSignList;
     }
 
-    public void setVitalSignList(ArrayList<VitalSign> vitalSignList) {
+    public void setVitalSignList(ArrayList<VitalSigns> vitalSignList) {
         this.vitalSignList = vitalSignList;
     }
 
