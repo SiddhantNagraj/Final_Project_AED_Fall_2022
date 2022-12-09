@@ -10,6 +10,7 @@ import java.util.ArrayList;
 /**
  *
  * @author Siddhant
+ 
  */
 public class NonProfit extends Enterprise
 {

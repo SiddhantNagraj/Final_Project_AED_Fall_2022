@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Business.Enterprise;
+
 import Business.Enterprise.Enterprise.EnterpriseType;
 import Business.Role.Role;
 import java.util.ArrayList;
@@ -25,4 +26,4 @@ public abstract class School extends Enterprise{
     public ArrayList<Role> getSupportedRole() {
         return null;
     } 
-}s
+}
