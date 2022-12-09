@@ -4,10 +4,23 @@
  */
 package Business.Enterprise;
 
+import Business.Role.Role;
+import java.util.ArrayList;
+
 /**
  *
  * @author Siddhant
+ 
  */
-public class NonProfit {
+public class NonProfit extends Enterprise
+{
+
     
-}
+     public NonProfit(String name) {
+        super(name, EnterpriseType.NonProfit);
+    }
+
+  
+    public ArrayList<Role> getSupportedRole() {
+        return null;
+    }}

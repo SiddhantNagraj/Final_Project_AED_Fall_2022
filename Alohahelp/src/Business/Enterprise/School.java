@@ -4,10 +4,26 @@
  */
 package Business.Enterprise;
 
+import Business.Enterprise.Enterprise.EnterpriseType;
+import Business.Role.Role;
+import java.util.ArrayList;
+
 /**
  *
  * @author Siddhant
  */
-public class School {
+public abstract class School extends Enterprise{
     
+     public School(String name) {
+        super(name, EnterpriseType.School);
+    }
+
+    /**
+     *
+     * @return
+     */
+    @Override
+    public ArrayList<Role> getSupportedRole() {
+        return null;
+    } 
 }
