@@ -2,9 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package model;
+package Person;
 
+import Person.Person;
 import java.util.ArrayList;
+import model.VitalSigns;
 
 /**
  *
@@ -21,7 +23,7 @@ public class HelpSeeker  extends Person{
     private ArrayList<VitalSigns> vitalSignList;
     private ArrayList<String> vitalSignTrackList;
     private boolean sendDataToDoctor = false;
-    private SensorDevice sensorDevice;
+    //private SensorDevice sensorDevice;
 
     public String getHelpSeekerId() {
         return helpSeekerId;
@@ -93,14 +95,14 @@ public class HelpSeeker  extends Person{
 
     public void setSendDataToDoctor(boolean sendDataToDoctor) {
         this.sendDataToDoctor = sendDataToDoctor;
-    }
+    } }
 
-    public SensorDevice getSensorDevice() {
-        return sensorDevice;
-    }
-
-    public void setSensorDevice(SensorDevice sensorDevice) {
-        this.sensorDevice = sensorDevice;
-    }
+//    public SensorDevice getSensorDevice() {
+//        return sensorDevice;
+//    }
+//
+//    public void setSensorDevice(SensorDevice sensorDevice) {
+//        this.sensorDevice = sensorDevice;
+//    }
     
-}
+

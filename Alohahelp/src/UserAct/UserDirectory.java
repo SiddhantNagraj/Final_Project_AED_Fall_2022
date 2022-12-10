@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package model;
+package UserAct;
 
+import UserAct.Users;
 import java.util.ArrayList;
 
 /**
@@ -11,14 +12,14 @@ import java.util.ArrayList;
  * @author shiba
  */
 public class UserDirectory {
-    private ArrayList<Users> userAccountList;
+    private ArrayList<Users> UsersList;
 
-    public ArrayList<Users> getUserAccountList() {
-        return userAccountList;
+    public ArrayList<Users> getUsersList() {
+        return UsersList;
     }
 
-    public void setUserAccountList(ArrayList<Users> userAccountList) {
-        this.userAccountList = userAccountList;
+    public void setUsersList(ArrayList<Users> UsersList) {
+        this.UsersList = UsersList;
     }
     
 }
