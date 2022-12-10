@@ -1,22 +1,28 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
  */
-package model;
+package WorkRequest;
 
+import business.Userspkg.Users;
 import java.util.Date;
 
 /**
  *
- * @author Siddhant
+ * @author raunak
  */
-public class WorkRequest {
-       private String message;
+public abstract class WorkRequest {
+
+    private String message;
     private Users sender;
     private Users receiver;
     private String status;
     private Date requestDate;
     private Date resolveDate;
+    
+    public WorkRequest(){
+        requestDate = new Date();
+    }
 
     public String getMessage() {
         return message;
@@ -65,5 +71,11 @@ public class WorkRequest {
     public void setResolveDate(Date resolveDate) {
         this.resolveDate = resolveDate;
     }
+
+    @Override
+    public String toString() {
+        return this.message;
+    }
+    
     
 }

@@ -2,7 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package model;
+package UserAct;
+
+import Network.Networks;
+import Person.Person;
+import WorkRequest.WorkRequest;
+import business.role.role;
+
 
 /**
  *
@@ -15,7 +21,7 @@ public class Users {
     private Person person; 
 
     private Roles role;
-    private WorkQueue workQueue;
+    private WorkRequest workRueue;
     private boolean enabled = true;
     private Networks network;
 
@@ -52,12 +58,12 @@ public class Users {
         this.role = role;
     }
 
-    public WorkQueue getWorkQueue() {
-        return workQueue;
+    public WorkRequest getWorkQueue() {
+        return workRueue;
     }
 
-    public void setWorkQueue(WorkQueue workQueue) {
-        this.workQueue = workQueue;
+    public void setWorkRequest(WorkRequest workQueue) {
+        this.workRueue = workRueue;
     }
 
     public boolean isEnabled() {
