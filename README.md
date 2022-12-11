@@ -20,3 +20,6 @@ Class Diagram
 -------------
 (https://user-images.githubusercontent.com/114314499/206932400-bbc0f48f-25aa-4dc7-b869-6d0ea4dc007b.png)
 
+
+Sequence Diagram
+----------------
