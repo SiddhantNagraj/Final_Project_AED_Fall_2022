@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="60" green="47" red="dc" type="rgb"/>
+    </Property>
+  </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -18,24 +23,22 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="manageEnt" min="-2" pref="253" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="manageEnt" min="-2" pref="400" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="refreshJButton" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="viewVolProfileBtn" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                          <Component id="assignJButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="processHelpRquestJButton" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="jScrollPane1" min="-2" pref="496" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="viewVolProfileBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="assignJButton" min="-2" pref="211" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="processHelpRquestJButton" min="-2" pref="188" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="jScrollPane1" alignment="1" min="-2" pref="704" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="343" max="32767" attributes="0"/>
+              <EmptySpace pref="135" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -47,7 +50,7 @@
                   <Component id="manageEnt" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="refreshJButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="173" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -55,7 +58,7 @@
                   <Component id="assignJButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="processHelpRquestJButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="168" max="32767" attributes="0"/>
+              <EmptySpace pref="170" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -64,7 +67,7 @@
     <Component class="javax.swing.JLabel" name="manageEnt">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Malayalam MN" size="24" style="3"/>
+          <Font name="Rockwell" size="36" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Transport Requests"/>
       </Properties>
@@ -119,6 +122,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="processHelpRquestJButton">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Process"/>
       </Properties>
       <Events>
@@ -127,6 +133,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="refreshJButton">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Refresh"/>
       </Properties>
       <Events>
@@ -135,6 +144,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="assignJButton">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Assign to me"/>
       </Properties>
       <Events>
@@ -143,6 +155,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="viewVolProfileBtn">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="View Volunteer Details"/>
       </Properties>
       <Events>

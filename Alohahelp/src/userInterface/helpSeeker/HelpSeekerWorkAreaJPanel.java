@@ -69,13 +69,13 @@ public class HelpSeekerWorkAreaJPanel extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
 
     public void populateAlerts()
     {
@@ -119,7 +119,7 @@ public class HelpSeekerWorkAreaJPanel extends javax.swing.JPanel {
          boolean flag = false;
             if(patientCond)
             {
-            txtField = new JTextField("Alert Message From Heart Help!");   
+            txtField = new JTextField("Alert Message From Aloha Help!");   
             txtField.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 14));
             txtField.setVisible(true);
             txtField.setEditable(false);
@@ -217,6 +217,9 @@ public class HelpSeekerWorkAreaJPanel extends javax.swing.JPanel {
         alertsPanel = new javax.swing.JPanel();
         manageHelpFromVolunteer = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 102, 102));
+
+        manageHelpSeekerProfile.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         manageHelpSeekerProfile.setText("Manage Profile and Vital Signs");
         manageHelpSeekerProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -224,6 +227,7 @@ public class HelpSeekerWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        writeTestimonialForVolBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         writeTestimonialForVolBtn.setText("Write Testimonial for Volunteer");
         writeTestimonialForVolBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -231,10 +235,10 @@ public class HelpSeekerWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        manageEnt.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        manageEnt.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
         manageEnt.setText("Help Seeker Work Area");
 
-        alertsPanel.setBackground(new java.awt.Color(153, 204, 0));
+        alertsPanel.setBackground(new java.awt.Color(220, 71, 96));
 
         javax.swing.GroupLayout alertsPanelLayout = new javax.swing.GroupLayout(alertsPanel);
         alertsPanel.setLayout(alertsPanelLayout);
@@ -247,6 +251,7 @@ public class HelpSeekerWorkAreaJPanel extends javax.swing.JPanel {
             .addGap(0, 497, Short.MAX_VALUE)
         );
 
+        manageHelpFromVolunteer.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         manageHelpFromVolunteer.setText("Manage Help From Volunteer");
         manageHelpFromVolunteer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -260,18 +265,19 @@ public class HelpSeekerWorkAreaJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addComponent(manageEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(122, 122, 122)
-                        .addComponent(manageHelpSeekerProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGap(85, 85, 85)
+                            .addComponent(manageEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(70, 70, 70)
+                            .addComponent(manageHelpSeekerProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(137, 137, 137)
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(writeTestimonialForVolBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 646, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(manageHelpFromVolunteer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 646, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 359, Short.MAX_VALUE)
+                            .addComponent(writeTestimonialForVolBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(manageHelpFromVolunteer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 552, Short.MAX_VALUE)
                 .addComponent(alertsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
         );
@@ -283,14 +289,14 @@ public class HelpSeekerWorkAreaJPanel extends javax.swing.JPanel {
                         .addGap(29, 29, 29)
                         .addComponent(alertsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
+                        .addGap(48, 48, 48)
                         .addComponent(manageEnt)
-                        .addGap(121, 121, 121)
-                        .addComponent(manageHelpSeekerProfile)
-                        .addGap(18, 18, 18)
-                        .addComponent(writeTestimonialForVolBtn)
-                        .addGap(18, 18, 18)
-                        .addComponent(manageHelpFromVolunteer)))
+                        .addGap(56, 56, 56)
+                        .addComponent(manageHelpSeekerProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(writeTestimonialForVolBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(47, 47, 47)
+                        .addComponent(manageHelpFromVolunteer, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(643, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents

@@ -48,7 +48,7 @@ import org.jfree.data.general.DefaultPieDataset;
  *
  * @author shiba
  */
-public class HeartHelpEnterpriseManagerWorkArea extends javax.swing.JPanel {
+public class AlohaHelpEnterpriseManagerWorkArea extends javax.swing.JPanel {
     private JPanel userProcessContainer;
    private  Enterprise enterprise;
    private EcoSystem ecoSystem;
@@ -61,9 +61,9 @@ public class HeartHelpEnterpriseManagerWorkArea extends javax.swing.JPanel {
      private List<Entry<String, Integer>> topDonorList;
     
     /**
-     * Creates new form HeartHelpEnterpriseManagerWorkArea
+     * Creates new form AlohaHelpEnterpriseManagerWorkArea
      */
-    public HeartHelpEnterpriseManagerWorkArea(JPanel userProcessContainer, Enterprise enterprise, EcoSystem ecoSystem, UserAc userAccount) {
+    public AlohaHelpEnterpriseManagerWorkArea(JPanel userProcessContainer, Enterprise enterprise, EcoSystem ecoSystem, UserAc userAccount) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
@@ -88,13 +88,13 @@ public class HeartHelpEnterpriseManagerWorkArea extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -121,13 +121,13 @@ public class HeartHelpEnterpriseManagerWorkArea extends javax.swing.JPanel {
         totSenDevReq1 = new javax.swing.JLabel();
         donatedAmntField = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(151, 197, 46));
+        setBackground(new java.awt.Color(220, 71, 96));
 
         valueLabel.setFont(new java.awt.Font("Lucida Grande", 3, 18)); // NOI18N
         valueLabel.setText("<value>");
 
-        manageEnt1.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
-        manageEnt1.setText("Heart Help Manager Work Area");
+        manageEnt1.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
+        manageEnt1.setText("AlohaHelp Manager Work Area");
 
         manageEnt2.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
         manageEnt2.setText("Enterprise:");
@@ -143,6 +143,7 @@ public class HeartHelpEnterpriseManagerWorkArea extends javax.swing.JPanel {
             .addGap(0, 398, Short.MAX_VALUE)
         );
 
+        top3VolunteersBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         top3VolunteersBtn.setText("View Top 3 Volunteers");
         top3VolunteersBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,14 +161,15 @@ public class HeartHelpEnterpriseManagerWorkArea extends javax.swing.JPanel {
         totTransReq.setText("Total No of Transport Requests");
 
         totSenDevReqField.setEditable(false);
-        totSenDevReqField.setBackground(new java.awt.Color(153, 204, 0));
+        totSenDevReqField.setBackground(new java.awt.Color(204, 204, 204));
 
         totTransReqField.setEditable(false);
-        totTransReqField.setBackground(new java.awt.Color(153, 204, 0));
+        totTransReqField.setBackground(new java.awt.Color(204, 204, 204));
 
         totHelpReqField.setEditable(false);
-        totHelpReqField.setBackground(new java.awt.Color(153, 204, 0));
+        totHelpReqField.setBackground(new java.awt.Color(204, 204, 204));
 
+        findTop3Donors.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         findTop3Donors.setText("View Top 3 Donors");
         findTop3Donors.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,6 +177,7 @@ public class HeartHelpEnterpriseManagerWorkArea extends javax.swing.JPanel {
             }
         });
 
+        viewDetailedReportBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         viewDetailedReportBtn.setText("View Detailed Report");
         viewDetailedReportBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,63 +185,62 @@ public class HeartHelpEnterpriseManagerWorkArea extends javax.swing.JPanel {
             }
         });
 
-        totSenDevReq1.setFont(new java.awt.Font("Malayalam MN", 3, 18)); // NOI18N
+        totSenDevReq1.setFont(new java.awt.Font("Malayalam MN", 1, 18)); // NOI18N
         totSenDevReq1.setText("Total Amount Donated By Donors");
 
         donatedAmntField.setEditable(false);
-        donatedAmntField.setBackground(new java.awt.Color(153, 204, 0));
+        donatedAmntField.setBackground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(345, 345, 345)
-                        .addComponent(manageEnt1, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(manageEnt2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(viewDetailedReportBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(top3VolunteersBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(findTop3Donors, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(totSenDevReq1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(totalHelpReq, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(totSenDevReq, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(totTransReq, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(viewDetailedReportBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(top3VolunteersBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(findTop3Donors, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(totSenDevReq1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(totalHelpReq, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(manageEnt2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(totSenDevReq, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(totTransReq, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(totSenDevReqField, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(totTransReqField, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(totHelpReqField, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(donatedAmntField, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(18, 18, 18)
-                        .addComponent(pieChartPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(totSenDevReqField, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(totTransReqField, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(totHelpReqField, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(donatedAmntField, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addComponent(pieChartPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(61, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(manageEnt1, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(556, 556, 556))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(manageEnt1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(78, 78, 78)
+                        .addGap(12, 12, 12)
                         .addComponent(pieChartPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(manageEnt1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(60, 60, 60)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(valueLabel)
-                            .addComponent(manageEnt2))
-                        .addGap(99, 99, 99)
+                            .addComponent(manageEnt2)
+                            .addComponent(valueLabel))
+                        .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(totalHelpReq)
                             .addComponent(totHelpReqField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -260,7 +262,7 @@ public class HeartHelpEnterpriseManagerWorkArea extends javax.swing.JPanel {
                         .addComponent(findTop3Donors)
                         .addGap(18, 18, 18)
                         .addComponent(viewDetailedReportBtn)))
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

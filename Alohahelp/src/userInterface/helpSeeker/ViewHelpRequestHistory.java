@@ -50,13 +50,13 @@ public class ViewHelpRequestHistory extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
     
     public void populateHelpSeekerRequestsHistoryTable()
     {
@@ -109,7 +109,7 @@ public class ViewHelpRequestHistory extends javax.swing.JPanel {
         manageEnt = new javax.swing.JLabel();
         backJButton = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(153, 204, 0));
+        setBackground(new java.awt.Color(220, 71, 96));
 
         workRequestHistoryTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -129,7 +129,7 @@ public class ViewHelpRequestHistory extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(workRequestHistoryTable);
 
-        manageEnt.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        manageEnt.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
         manageEnt.setText("View History of Help Requests");
 
         backJButton.setText("<< Back");
@@ -143,29 +143,30 @@ public class ViewHelpRequestHistory extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(manageEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(182, 182, 182))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(236, 236, 236)
-                        .addComponent(manageEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(134, 134, 134)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 646, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
+                        .addGap(420, 420, 420)
                         .addComponent(backJButton)))
                 .addContainerGap(154, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(56, 56, 56)
                 .addComponent(manageEnt)
-                .addGap(67, 67, 67)
+                .addGap(42, 42, 42)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                .addGap(30, 30, 30)
                 .addComponent(backJButton)
-                .addGap(55, 55, 55))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

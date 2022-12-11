@@ -49,13 +49,13 @@ public class ProcessTransportWorkRequestJPanel extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+        //GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
     
     public void populateResultComboBox()
     {
@@ -78,6 +78,9 @@ public class ProcessTransportWorkRequestJPanel extends javax.swing.JPanel {
         resultComboBox = new javax.swing.JComboBox();
         backJButton = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(220, 71, 96));
+
+        submitJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         submitJButton.setText("Submit");
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,13 +88,15 @@ public class ProcessTransportWorkRequestJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel1.setText("Request Result");
 
-        jLabel7.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
         jLabel7.setText("Process Work Request:");
 
         resultComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        backJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,22 +109,19 @@ public class ProcessTransportWorkRequestJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(153, 153, 153)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(153, 153, 153)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(120, 120, 120)
-                                .addComponent(resultComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(backJButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(266, 266, 266)
-                        .addComponent(submitJButton)))
-                .addContainerGap(374, Short.MAX_VALUE))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(backJButton)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(submitJButton))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabel1)
+                            .addGap(120, 120, 120)
+                            .addComponent(resultComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,11 +132,11 @@ public class ProcessTransportWorkRequestJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(resultComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(76, 76, 76)
-                .addComponent(submitJButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
-                .addComponent(backJButton)
-                .addGap(59, 59, 59))
+                .addGap(44, 44, 44)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(submitJButton)
+                    .addComponent(backJButton))
+                .addContainerGap(266, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

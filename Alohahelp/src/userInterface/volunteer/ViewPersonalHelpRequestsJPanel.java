@@ -55,12 +55,7 @@ public class ViewPersonalHelpRequestsJPanel extends javax.swing.JPanel {
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
      
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
-    }
+        }
     
     public void populatehelpRequestTable()
     {
@@ -110,10 +105,12 @@ public class ViewPersonalHelpRequestsJPanel extends javax.swing.JPanel {
         accountTxtAreaField = new javax.swing.JTextArea();
         viewHelpSeekerBtn = new javax.swing.JButton();
 
-        manageEnt1.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
-        manageEnt1.setText("Heart Help");
+        setBackground(new java.awt.Color(220, 71, 96));
 
-        manageEnt.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        manageEnt1.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
+        manageEnt1.setText("AlohaHelp");
+
+        manageEnt.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
         manageEnt.setText("Personal Help Requests");
 
         helpRequestListTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -134,6 +131,7 @@ public class ViewPersonalHelpRequestsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(helpRequestListTable);
 
+        processHelpRquestJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         processHelpRquestJButton.setText("Process");
         processHelpRquestJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,6 +139,7 @@ public class ViewPersonalHelpRequestsJPanel extends javax.swing.JPanel {
             }
         });
 
+        refreshJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         refreshJButton.setText("Refresh");
         refreshJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,6 +147,7 @@ public class ViewPersonalHelpRequestsJPanel extends javax.swing.JPanel {
             }
         });
 
+        assignJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         assignJButton.setText("Assign to me");
         assignJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,6 +155,7 @@ public class ViewPersonalHelpRequestsJPanel extends javax.swing.JPanel {
             }
         });
 
+        backJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         backJButton.setText("<< Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,6 +167,7 @@ public class ViewPersonalHelpRequestsJPanel extends javax.swing.JPanel {
         accountTxtAreaField.setRows(5);
         jScrollPane2.setViewportView(accountTxtAreaField);
 
+        viewHelpSeekerBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         viewHelpSeekerBtn.setText("View Requestor Profile");
         viewHelpSeekerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,57 +180,48 @@ public class ViewPersonalHelpRequestsJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(manageEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(109, 109, 109)
-                .addComponent(refreshJButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(73, 73, 73))
-            .addGroup(layout.createSequentialGroup()
+                .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(manageEnt1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(300, 300, 300)
-                        .addComponent(manageEnt1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 603, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(backJButton)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(133, 133, 133)
-                                    .addComponent(viewHelpSeekerBtn)
-                                    .addGap(33, 33, 33)
-                                    .addComponent(assignJButton)
-                                    .addGap(34, 34, 34)
-                                    .addComponent(processHelpRquestJButton))))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(manageEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(refreshJButton))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 603, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(viewHelpSeekerBtn)
+                                .addGap(18, 18, 18)
+                                .addComponent(assignJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(processHelpRquestJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(157, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(55, 55, 55)
                 .addComponent(manageEnt1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(217, 217, 217))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(manageEnt)
-                            .addComponent(refreshJButton))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)))
+                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(processHelpRquestJButton)
+                    .addComponent(refreshJButton)
+                    .addComponent(manageEnt))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(viewHelpSeekerBtn)
                     .addComponent(assignJButton)
-                    .addComponent(viewHelpSeekerBtn))
-                .addGap(11, 11, 11)
+                    .addComponent(processHelpRquestJButton))
+                .addGap(28, 28, 28)
                 .addComponent(backJButton)
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

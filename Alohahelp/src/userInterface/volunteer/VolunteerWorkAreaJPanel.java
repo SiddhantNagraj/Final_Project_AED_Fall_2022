@@ -55,13 +55,8 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+//       
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -80,9 +75,12 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         viewAnonymousReqBtn = new javax.swing.JButton();
         viewVolProfileBtn = new javax.swing.JButton();
 
-        manageEnt.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        setBackground(new java.awt.Color(220, 71, 96));
+
+        manageEnt.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
         manageEnt.setText("Volunteer Work Area");
 
+        viewPersonalHelpRequestBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         viewPersonalHelpRequestBtn.setText("View Personal Help Requests");
         viewPersonalHelpRequestBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,6 +88,7 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        manageVolunteerProfileBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         manageVolunteerProfileBtn.setText("Update Profile ");
         manageVolunteerProfileBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,6 +96,7 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        viewTestimonialsBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         viewTestimonialsBtn.setText("View Testimonials");
         viewTestimonialsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,9 +104,10 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        manageEnt1.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
-        manageEnt1.setText("Welcome to Heart Help");
+        manageEnt1.setFont(new java.awt.Font("Rockwell", 1, 48)); // NOI18N
+        manageEnt1.setText("Welcome to AlohaHelp");
 
+        viewAnonymousReqBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         viewAnonymousReqBtn.setText("View Anonymous Help Requests");
         viewAnonymousReqBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,6 +115,7 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        viewVolProfileBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         viewVolProfileBtn.setText("View Profile");
         viewVolProfileBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,47 +127,49 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(90, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(viewTestimonialsBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(viewVolProfileBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(viewPersonalHelpRequestBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(viewAnonymousReqBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(547, 547, 547))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(221, 221, 221)
-                        .addComponent(manageEnt1, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
-                        .addComponent(manageEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(manageVolunteerProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(manageEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(284, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(viewPersonalHelpRequestBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(viewVolProfileBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(67, 67, 67)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(viewAnonymousReqBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(manageVolunteerProfileBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(302, 302, 302))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(348, 348, 348)
+                        .addComponent(manageEnt1, javax.swing.GroupLayout.PREFERRED_SIZE, 554, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(479, 479, 479)
+                .addComponent(viewTestimonialsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addGap(24, 24, 24)
                 .addComponent(manageEnt1)
-                .addGap(45, 45, 45)
+                .addGap(18, 18, 18)
                 .addComponent(manageEnt)
-                .addGap(58, 58, 58)
-                .addComponent(manageVolunteerProfileBtn)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(viewVolProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(manageVolunteerProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(viewPersonalHelpRequestBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(viewAnonymousReqBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
-                .addComponent(viewPersonalHelpRequestBtn)
-                .addGap(18, 18, 18)
-                .addComponent(viewAnonymousReqBtn)
-                .addGap(18, 18, 18)
-                .addComponent(viewTestimonialsBtn)
-                .addGap(18, 18, 18)
-                .addComponent(viewVolProfileBtn)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addComponent(viewTestimonialsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

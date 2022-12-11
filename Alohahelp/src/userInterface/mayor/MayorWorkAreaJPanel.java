@@ -61,13 +61,13 @@ public class MayorWorkAreaJPanel extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
     
     public void populateWorkRequestTable()
     {
@@ -109,7 +109,7 @@ public class MayorWorkAreaJPanel extends javax.swing.JPanel {
          {
           for(Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList())
           {
-            if(enterprise.getEnterpriseType().equals(Enterprise.EnterpriseType.HeartHelp))
+            if(enterprise.getEnterpriseType().equals(Enterprise.EnterpriseType.AlohaHelp))
             {
             for(Orga organization : enterprise.getOrganizationDirectory().getOrganizationList())
             {
@@ -205,9 +205,12 @@ public class MayorWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         communityHealthTable = new javax.swing.JTable();
 
-        jLabel6.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        setBackground(new java.awt.Color(220, 71, 96));
+
+        jLabel6.setFont(new java.awt.Font("Rockwell", 1, 24)); // NOI18N
         jLabel6.setText("Mayor Work Area");
 
+        viewDetailedRprtMayorBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         viewDetailedRprtMayorBtn.setText("View Detailed Report");
         viewDetailedRprtMayorBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -215,7 +218,7 @@ public class MayorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Rockwell", 1, 24)); // NOI18N
         jLabel7.setText("Community Health Report:");
 
         communityHealthTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -241,18 +244,13 @@ public class MayorWorkAreaJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(364, 364, 364)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(viewDetailedRprtMayorBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 745, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(367, Short.MAX_VALUE))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 911, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(viewDetailedRprtMayorBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(201, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,9 +261,9 @@ public class MayorWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(jLabel7)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
-                .addComponent(viewDetailedRprtMayorBtn)
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(viewDetailedRprtMayorBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(128, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

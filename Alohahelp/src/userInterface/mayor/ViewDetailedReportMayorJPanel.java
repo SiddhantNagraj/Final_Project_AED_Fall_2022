@@ -54,13 +54,13 @@ public class ViewDetailedReportMayorJPanel extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
     
     public void populateDetailsForCommunity()
     {
@@ -202,20 +202,22 @@ public class ViewDetailedReportMayorJPanel extends javax.swing.JPanel {
         barchartBtn = new javax.swing.JButton();
         manageEnt2 = new javax.swing.JLabel();
 
-        manageEnt1.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        setBackground(new java.awt.Color(220, 71, 96));
+
+        manageEnt1.setFont(new java.awt.Font("Rockwell", 1, 24)); // NOI18N
         manageEnt1.setText("View Detailed Report");
 
         jLayeredPane1.setBackground(new java.awt.Color(255, 204, 204));
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         senSendDataToDocField.setEditable(false);
-        senSendDataToDocField.setBackground(new java.awt.Color(153, 204, 0));
+        senSendDataToDocField.setBackground(new java.awt.Color(204, 204, 204));
 
         sendToDoc.setFont(new java.awt.Font("Malayalam MN", 3, 18)); // NOI18N
         sendToDoc.setText("Total No of Seniors who send data to doctor");
 
         seniorsWithHeartPrbField.setEditable(false);
-        seniorsWithHeartPrbField.setBackground(new java.awt.Color(153, 204, 0));
+        seniorsWithHeartPrbField.setBackground(new java.awt.Color(204, 204, 204));
 
         totTransReq1.setFont(new java.awt.Font("Malayalam MN", 3, 18)); // NOI18N
         totTransReq1.setText("Total No of Seniors who share Vital Info");
@@ -224,7 +226,7 @@ public class ViewDetailedReportMayorJPanel extends javax.swing.JPanel {
         totalSeniorPpl.setText("Total No of Senior People who are in need of Help");
 
         senShareInfoField.setEditable(false);
-        senShareInfoField.setBackground(new java.awt.Color(153, 204, 0));
+        senShareInfoField.setBackground(new java.awt.Color(204, 204, 204));
 
         noheartPrblm.setFont(new java.awt.Font("Malayalam MN", 3, 18)); // NOI18N
         noheartPrblm.setText("No of Senior people with no heart problem ");
@@ -233,22 +235,37 @@ public class ViewDetailedReportMayorJPanel extends javax.swing.JPanel {
         hasHeartPblm.setText("No of Senior people with heart problem");
 
         senWithNoHeartProbField.setEditable(false);
-        senWithNoHeartProbField.setBackground(new java.awt.Color(153, 204, 0));
+        senWithNoHeartProbField.setBackground(new java.awt.Color(204, 204, 204));
 
         totSeniorPPLField.setEditable(false);
-        totSeniorPPLField.setBackground(new java.awt.Color(153, 204, 0));
+        totSeniorPPLField.setBackground(new java.awt.Color(204, 204, 204));
 
         hasNoSensor.setFont(new java.awt.Font("Malayalam MN", 3, 18)); // NOI18N
         hasNoSensor.setText("Total No of Seniors who dont have sensor device");
 
         senWithSensorField.setEditable(false);
-        senWithSensorField.setBackground(new java.awt.Color(153, 204, 0));
+        senWithSensorField.setBackground(new java.awt.Color(204, 204, 204));
 
         hasSensor.setFont(new java.awt.Font("Malayalam MN", 3, 18)); // NOI18N
         hasSensor.setText("Total No of seniors who has sensor device");
 
         senNoSensorDevField.setEditable(false);
-        senNoSensorDevField.setBackground(new java.awt.Color(153, 204, 0));
+        senNoSensorDevField.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLayeredPane1.setLayer(senSendDataToDocField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(sendToDoc, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(seniorsWithHeartPrbField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(totTransReq1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(totalSeniorPpl, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(senShareInfoField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(noheartPrblm, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(hasHeartPblm, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(senWithNoHeartProbField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(totSeniorPPLField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(hasNoSensor, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(senWithSensorField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(hasSensor, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(senNoSensorDevField, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -274,7 +291,7 @@ public class ViewDetailedReportMayorJPanel extends javax.swing.JPanel {
                     .addComponent(seniorsWithHeartPrbField, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(totSeniorPPLField, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(senSendDataToDocField, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -309,20 +326,6 @@ public class ViewDetailedReportMayorJPanel extends javax.swing.JPanel {
                     .addComponent(senSendDataToDocField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
-        jLayeredPane1.setLayer(senSendDataToDocField, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(sendToDoc, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(seniorsWithHeartPrbField, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(totTransReq1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(totalSeniorPpl, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(senShareInfoField, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(noheartPrblm, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(hasHeartPblm, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(senWithNoHeartProbField, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(totSeniorPPLField, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(hasNoSensor, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(senWithSensorField, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(hasSensor, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(senNoSensorDevField, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout pieChartDetailedReportPanelLayout = new javax.swing.GroupLayout(pieChartDetailedReportPanel);
         pieChartDetailedReportPanel.setLayout(pieChartDetailedReportPanelLayout);
@@ -335,6 +338,7 @@ public class ViewDetailedReportMayorJPanel extends javax.swing.JPanel {
             .addGap(0, 370, Short.MAX_VALUE)
         );
 
+        backJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         backJButton.setText("<< Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -342,6 +346,7 @@ public class ViewDetailedReportMayorJPanel extends javax.swing.JPanel {
             }
         });
 
+        barchartBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         barchartBtn.setText("View Bar Chart");
         barchartBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -349,8 +354,8 @@ public class ViewDetailedReportMayorJPanel extends javax.swing.JPanel {
             }
         });
 
-        manageEnt2.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
-        manageEnt2.setText("Heart Help Mayor Work Area");
+        manageEnt2.setFont(new java.awt.Font("Rockwell", 1, 24)); // NOI18N
+        manageEnt2.setText("AlohaHelp Mayor Work Area");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -364,14 +369,15 @@ public class ViewDetailedReportMayorJPanel extends javax.swing.JPanel {
                         .addGap(117, 117, 117)
                         .addComponent(manageEnt2, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(backJButton)
-                        .addGap(312, 312, 312)
-                        .addComponent(barchartBtn))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(barchartBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(50, 50, 50)
                         .addComponent(pieChartDetailedReportPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -388,15 +394,11 @@ public class ViewDetailedReportMayorJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pieChartDetailedReportPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                        .addComponent(backJButton)
-                        .addGap(27, 27, 27))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(barchartBtn)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(barchartBtn)
+                    .addComponent(backJButton))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

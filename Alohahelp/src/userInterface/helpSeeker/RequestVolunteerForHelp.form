@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="60" green="47" red="dc" type="rgb"/>
+    </Property>
+  </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -18,10 +23,11 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="389" max="-2" attributes="0"/>
-                      <Component id="manageEnt2" min="-2" pref="155" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="backJButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="createRequestButton" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="manageEnt1" min="-2" pref="229" max="-2" attributes="0"/>
@@ -32,103 +38,90 @@
                   </Group>
                   <Component id="jScrollPane3" alignment="0" min="-2" pref="482" max="-2" attributes="0"/>
                   <Component id="otherHelpPanel" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="347" max="-2" attributes="0"/>
-                      <Component id="createRequestButton" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="backJButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="manageEnt5" min="-2" pref="350" max="-2" attributes="0"/>
+                  <Component id="manageEnt2" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="firstName" min="-2" pref="76" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="firstNameField" min="-2" pref="184" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="dateOfBirth" min="-2" max="-2" attributes="0"/>
-                                          <Component id="LastName" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="gender" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="genderField" max="32767" attributes="0"/>
-                                  <Component id="lastNameField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="dobField" alignment="0" min="-2" pref="181" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="viewYourProfile" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <Component id="LastName" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="firstName" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="manageEnt3" min="-2" pref="289" max="-2" attributes="0"/>
                           <Component id="jScrollPane2" min="-2" pref="475" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="lastNameField" min="-2" pref="181" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="gender" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
+                                  <Component id="firstNameField" min="-2" pref="184" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="genderField" min="-2" pref="181" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                          <Component id="dateOfBirth" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="dobField" min="-2" pref="181" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="viewYourProfile" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="manageEnt5" min="-2" pref="350" max="-2" attributes="0"/>
-                  <EmptySpace pref="666" max="32767" attributes="0"/>
-              </Group>
+              <EmptySpace pref="9" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       <Component id="manageEnt2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="manageEnt5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jScrollPane3" min="-2" pref="168" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="manageEnt1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="manageEnt4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="manageEnt3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="newHelpRadioBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="viewYourProfile" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="firstName" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="firstNameField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="firstName" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="LastName" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lastNameField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="LastName" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="dateOfBirth" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="dobField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dateOfBirth" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="genderField" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="gender" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="genderField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+              </Group>
+              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="manageEnt1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="manageEnt4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="newHelpRadioBtn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -136,28 +129,23 @@
                       <Component id="otherHelpPanel" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="createRequestButton" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                               <Component id="backJButton1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="createRequestButton" min="-2" pref="63" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
+                      <Component id="manageEnt3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" pref="173" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
-          </Group>
-          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                  <Component id="manageEnt5" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="480" max="32767" attributes="0"/>
-              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -166,9 +154,9 @@
     <Component class="javax.swing.JLabel" name="manageEnt2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Malayalam MN" size="24" style="3"/>
+          <Font name="Rockwell" size="36" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Heart Help"/>
+        <Property name="text" type="java.lang.String" value="AlohaHelp"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="manageEnt1">
@@ -181,6 +169,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="createRequestButton">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Create Request"/>
       </Properties>
       <Events>
@@ -190,7 +181,7 @@
     <Component class="javax.swing.JLabel" name="manageEnt3">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Malayalam MN" size="24" style="3"/>
+          <Font name="Malayalam MN" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Help Requests History:"/>
       </Properties>
@@ -205,6 +196,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="LastName">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Last Name:"/>
       </Properties>
     </Component>
@@ -216,6 +210,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="gender">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Gender:"/>
       </Properties>
     </Component>
@@ -226,13 +223,16 @@
     </Component>
     <Component class="javax.swing.JLabel" name="firstName">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="First Name:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="viewYourProfile">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Lucida Grande" size="18" style="1"/>
+          <Font name="Lucida Grande" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Volunteer Details:"/>
       </Properties>
@@ -245,6 +245,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="dateOfBirth">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Date Of Birth "/>
       </Properties>
     </Component>
@@ -323,11 +326,17 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="15" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Enter details of help needed: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="serviceType">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="15" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Service Type"/>
           </Properties>
         </Component>
@@ -390,13 +399,16 @@
     <Component class="javax.swing.JLabel" name="manageEnt5">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Malayalam MN" size="24" style="3"/>
+          <Font name="Malayalam MN" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Request Volunteer For Help:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="backJButton1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="&lt;&lt; Back"/>
       </Properties>
       <Events>

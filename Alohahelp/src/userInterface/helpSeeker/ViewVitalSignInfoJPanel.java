@@ -73,13 +73,13 @@ public class ViewVitalSignInfoJPanel extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -103,13 +103,18 @@ public class ViewVitalSignInfoJPanel extends javax.swing.JPanel {
         manageEnt1 = new javax.swing.JLabel();
         backJButton = new javax.swing.JButton();
 
-        getAlert2.setText("Get alert from Heart Help:");
+        setBackground(new java.awt.Color(220, 71, 96));
 
+        getAlert2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        getAlert2.setText("Get alert from Aloha Help:");
+
+        getAlert3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         getAlert3.setText("Sensor device to track Vital Signs");
 
         getAlertJRadioNo1.setText("No");
         getAlertJRadioNo1.setEnabled(false);
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel2.setText("Vital Signs you would like to track:");
 
         hasSensorRadioNo1.setText("No");
@@ -130,8 +135,8 @@ public class ViewVitalSignInfoJPanel extends javax.swing.JPanel {
         getAlertJRadioYes1.setText("Yes");
         getAlertJRadioYes1.setEnabled(false);
 
-        manageEnt1.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
-        manageEnt1.setText("Heart Help");
+        manageEnt1.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
+        manageEnt1.setText("AlohaHelp");
 
         backJButton.setText("<< Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -150,30 +155,32 @@ public class ViewVitalSignInfoJPanel extends javax.swing.JPanel {
                         .addGap(202, 202, 202)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(viewYourProfile3)
+                            .addComponent(backJButton)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(246, 246, 246)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(getAlert2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(getAlertJRadioYes1))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(getAlert3, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(40, 40, 40)
+                                        .addComponent(hasSensorRadioYes1)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(getAlertJRadioYes1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(getAlertJRadioNo1))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(hasSensorRadioYes1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(hasSensorRadioNo1))))
-                            .addComponent(getAlert2)
-                            .addComponent(getAlert3, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(41, 41, 41)
+                                        .addComponent(hasSensorRadioNo1))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGap(51, 51, 51)
+                                        .addComponent(getAlertJRadioNo1))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(96, 96, 96)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(349, 349, 349)
-                        .addComponent(manageEnt1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(backJButton)))
-                .addContainerGap(263, Short.MAX_VALUE))
+                        .addComponent(manageEnt1, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,24 +193,22 @@ public class ViewVitalSignInfoJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(getAlert2)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(getAlert3)
-                            .addGap(38, 38, 38)))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 251, Short.MAX_VALUE)
+                        .addComponent(backJButton)
+                        .addGap(58, 58, 58))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(hasSensorRadioNo1)
                             .addComponent(hasSensorRadioYes1)
-                            .addComponent(hasSensorRadioNo1))
-                        .addGap(22, 22, 22)
+                            .addComponent(getAlert3))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(getAlertJRadioNo1)
                             .addComponent(getAlertJRadioYes1)
-                            .addComponent(getAlertJRadioNo1))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 158, Short.MAX_VALUE)
-                .addComponent(backJButton)
-                .addGap(58, 58, 58))
+                            .addComponent(getAlert2)))))
         );
     }// </editor-fold>//GEN-END:initComponents
 

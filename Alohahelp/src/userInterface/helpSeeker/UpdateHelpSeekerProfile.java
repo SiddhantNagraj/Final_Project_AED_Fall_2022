@@ -78,13 +78,13 @@ public class UpdateHelpSeekerProfile extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
     
     private void addInputVerifiers() {
           
@@ -158,23 +158,29 @@ public class UpdateHelpSeekerProfile extends javax.swing.JPanel {
         viewYourProfile2 = new javax.swing.JLabel();
 
         manageEnt.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
-        manageEnt.setText("Welcome to Heart Help");
+        manageEnt.setText("Welcome to Aloha Help");
+
+        setBackground(new java.awt.Color(220, 71, 96));
 
         occupationField.setEditable(false);
         occupationField.setEnabled(false);
 
+        emailID.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         emailID.setText("Email Address:");
 
         emailIDField.setEditable(false);
         emailIDField.setEnabled(false);
 
+        areaCode.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         areaCode.setText("User Name:");
 
         userNameTxtField.setEditable(false);
         userNameTxtField.setEnabled(false);
 
+        firstName.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         firstName.setText("First Name:");
 
+        phoneNumber.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         phoneNumber.setText("Phone Number:");
 
         firstNameField.setEditable(false);
@@ -203,6 +209,7 @@ public class UpdateHelpSeekerProfile extends javax.swing.JPanel {
             }
         });
 
+        LastName.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         LastName.setText("Last Name:");
 
         backJButton.setText("<< Back");
@@ -215,34 +222,41 @@ public class UpdateHelpSeekerProfile extends javax.swing.JPanel {
         lastNameField.setEditable(false);
         lastNameField.setEnabled(false);
 
+        dateOfBirth.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         dateOfBirth.setText("Date Of Birth (MM/DD/YYYY):");
 
+        address.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         address.setText("Address Line1:");
 
         addressField1.setEditable(false);
         addressField1.setEnabled(false);
 
+        town.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         town.setText("Town/City: ");
 
         townField.setEditable(false);
         townField.setEnabled(false);
 
+        zipCode.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         zipCode.setText("Zip Code:");
 
         zipCodeField.setEditable(false);
         zipCodeField.setEnabled(false);
 
+        occupation.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         occupation.setText("Occupation:");
 
         dobField.setEnabled(false);
 
+        address2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         address2.setText("Address Line2 : ");
 
         addressField2.setEnabled(false);
 
-        manageEnt1.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
-        manageEnt1.setText("Heart Help");
+        manageEnt1.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
+        manageEnt1.setText("AlohaHelp");
 
+        gender.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         gender.setText("Gender:");
 
         genderComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Choose gender", "Female", "Male", "Transgender", "Unknown" }));
@@ -261,23 +275,13 @@ public class UpdateHelpSeekerProfile extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(365, 365, 365)
-                        .addComponent(manageEnt1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(52, 52, 52)
-                        .addComponent(emailID, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
-                        .addComponent(emailIDField, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(277, 277, 277)
+                        .addGap(25, 25, 25)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(backJButton)
-                                .addGap(299, 299, 299))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(updateJButton)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(saveJButton))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(345, 345, 345)
+                                .addComponent(viewYourProfile1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(252, 252, 252)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -290,17 +294,16 @@ public class UpdateHelpSeekerProfile extends javax.swing.JPanel {
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(LastName, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(viewYourProfile1))
-                                                .addGap(18, 18, 18))
-                                            .addGroup(layout.createSequentialGroup()
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(occupation)
                                                     .addComponent(areaCode)
                                                     .addComponent(phoneNumber))
-                                                .addGap(114, 114, 114)))
+                                                .addGap(114, 114, 114))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(LastName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(firstName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(lastNameField)
                                             .addComponent(occupationField)
@@ -318,25 +321,42 @@ public class UpdateHelpSeekerProfile extends javax.swing.JPanel {
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(dateOfBirth, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(gender)
-                                            .addComponent(viewYourProfile2))
+                                            .addComponent(gender))
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(dobField)
-                                            .addComponent(genderComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
-                .addContainerGap(421, Short.MAX_VALUE))
+                                            .addComponent(genderComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(67, 67, 67)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(updateJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(backJButton)
+                                        .addComponent(saveJButton))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(manageEnt1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(313, 313, 313)
+                                .addComponent(emailID, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(emailIDField, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(430, 430, 430)
+                        .addComponent(viewYourProfile2)))
+                .addContainerGap(395, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(13, 13, 13)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(emailIDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(emailID)
-                    .addComponent(manageEnt1))
-                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(emailIDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(emailID)
+                        .addComponent(manageEnt1)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(viewYourProfile1)
-                .addGap(10, 10, 10)
+                .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(firstName)
                     .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -352,9 +372,9 @@ public class UpdateHelpSeekerProfile extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(gender)
                     .addComponent(genderComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(viewYourProfile2)
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(address)
                     .addComponent(addressField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -368,27 +388,26 @@ public class UpdateHelpSeekerProfile extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(zipCodeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(zipCode))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(occupation)
-                    .addComponent(occupationField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userNameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(areaCode))
+                    .addComponent(zipCode)
+                    .addComponent(updateJButton))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(occupation)
+                            .addComponent(occupationField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(userNameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(areaCode)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(saveJButton)))
                 .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(phoneNumberField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(phoneNumber))
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(backJButton)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(saveJButton)
-                            .addComponent(updateJButton))))
-                .addGap(30, 30, 30))
+                    .addComponent(phoneNumber)
+                    .addComponent(backJButton))
+                .addGap(97, 97, 97))
         );
     }// </editor-fold>//GEN-END:initComponents
 

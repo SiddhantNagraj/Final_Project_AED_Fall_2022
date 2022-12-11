@@ -56,12 +56,7 @@ public class ViewAnonymousRequestJPanel extends javax.swing.JPanel {
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
      
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
-    }
+        }
     
      public void populateAnonymousHelpRequestTable(){
          
@@ -101,6 +96,9 @@ public class ViewAnonymousRequestJPanel extends javax.swing.JPanel {
         anonymousHelpReqTable = new javax.swing.JTable();
         viewHelpSeekerBtn = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(220, 71, 96));
+
+        processHelpRquestJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         processHelpRquestJButton.setText("Process");
         processHelpRquestJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +106,7 @@ public class ViewAnonymousRequestJPanel extends javax.swing.JPanel {
             }
         });
 
+        refreshJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         refreshJButton.setText("Refresh");
         refreshJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,12 +114,13 @@ public class ViewAnonymousRequestJPanel extends javax.swing.JPanel {
             }
         });
 
-        manageEnt1.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
-        manageEnt1.setText("Heart Help");
+        manageEnt1.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
+        manageEnt1.setText("AlohaHelp");
 
-        manageEnt.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        manageEnt.setFont(new java.awt.Font("Rockwell", 1, 24)); // NOI18N
         manageEnt.setText("Help Requests");
 
+        assignJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         assignJButton.setText("Assign to me");
         assignJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,6 +128,7 @@ public class ViewAnonymousRequestJPanel extends javax.swing.JPanel {
             }
         });
 
+        backJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         backJButton.setText("<< Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,6 +154,7 @@ public class ViewAnonymousRequestJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(anonymousHelpReqTable);
 
+        viewHelpSeekerBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         viewHelpSeekerBtn.setText("View Requestor Profile");
         viewHelpSeekerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,29 +167,23 @@ public class ViewAnonymousRequestJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(backJButton)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(viewHelpSeekerBtn)
-                        .addGap(47, 47, 47)
-                        .addComponent(assignJButton)
-                        .addGap(37, 37, 37)
-                        .addComponent(processHelpRquestJButton))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(300, 300, 300)
-                            .addComponent(manageEnt1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(48, 48, 48)
-                            .addComponent(manageEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(209, 209, 209)
-                            .addComponent(refreshJButton))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(48, 48, 48)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(backJButton)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(394, Short.MAX_VALUE))
+                        .addComponent(manageEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(209, 209, 209)
+                        .addComponent(refreshJButton))
+                    .addComponent(manageEnt1, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(viewHelpSeekerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(assignJButton)
+                            .addGap(18, 18, 18)
+                            .addComponent(processHelpRquestJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(387, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -200,14 +196,14 @@ public class ViewAnonymousRequestJPanel extends javax.swing.JPanel {
                     .addComponent(refreshJButton))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(processHelpRquestJButton)
+                    .addComponent(viewHelpSeekerBtn)
                     .addComponent(assignJButton)
-                    .addComponent(viewHelpSeekerBtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                    .addComponent(processHelpRquestJButton))
+                .addGap(18, 18, 18)
                 .addComponent(backJButton)
-                .addGap(71, 71, 71))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

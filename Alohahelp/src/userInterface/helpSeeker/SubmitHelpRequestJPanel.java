@@ -61,13 +61,13 @@ public class SubmitHelpRequestJPanel extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
     
      public void populateVolunteerDetails()
     {
@@ -122,13 +122,17 @@ public class SubmitHelpRequestJPanel extends javax.swing.JPanel {
         manageEnt3.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
         manageEnt3.setText("Request Volunteer For Help:");
 
-        submitRequest.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
-        submitRequest.setText("Submit Request toVolunteer For Help:");
+        setBackground(new java.awt.Color(220, 71, 96));
 
+        submitRequest.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
+        submitRequest.setText("Submit Request to Volunteer For Help:");
+
+        LastName.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         LastName.setText("Last Name:");
 
         genderField.setEnabled(false);
 
+        dateOfBirth.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         dateOfBirth.setText("Date Of Birth ");
 
         lastNameField.setEditable(false);
@@ -137,15 +141,18 @@ public class SubmitHelpRequestJPanel extends javax.swing.JPanel {
         viewYourProfile.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         viewYourProfile.setText("Volunteer Details:");
 
+        firstName.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         firstName.setText("First Name:");
 
         dobField.setEnabled(false);
 
+        gender.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         gender.setText("Gender:");
 
         firstNameField.setEditable(false);
         firstNameField.setEnabled(false);
 
+        LastName1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         LastName1.setText("Help Type:");
 
         serviceTypeTxtField.setEditable(false);
@@ -154,13 +161,16 @@ public class SubmitHelpRequestJPanel extends javax.swing.JPanel {
         viewYourProfile1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         viewYourProfile1.setText("Help Request Details:");
 
+        firstName1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         firstName1.setText("Need Help:");
 
+        gender1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         gender1.setText("Comments:");
 
         helpNameTxtField.setEditable(false);
         helpNameTxtField.setEnabled(false);
 
+        submitHelpRequest.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         submitHelpRequest.setText("Submit");
         submitHelpRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,8 +178,10 @@ public class SubmitHelpRequestJPanel extends javax.swing.JPanel {
             }
         });
 
+        cancelHelpRequest.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         cancelHelpRequest.setText("Cancel");
 
+        backJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         backJButton.setText("<<Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,11 +197,7 @@ public class SubmitHelpRequestJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(46, 46, 46)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(backJButton)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(126, 126, 126)
-                                .addComponent(submitRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(backJButton))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(108, 108, 108)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -234,18 +242,21 @@ public class SubmitHelpRequestJPanel extends javax.swing.JPanel {
                                         .addComponent(commentsTextField)
                                         .addComponent(serviceTypeTxtField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(328, 328, 328)
-                        .addComponent(submitHelpRequest)
-                        .addGap(18, 18, 18)
-                        .addComponent(cancelHelpRequest)))
-                .addContainerGap(324, Short.MAX_VALUE))
+                        .addGap(297, 297, 297)
+                        .addComponent(submitHelpRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(87, 87, 87)
+                        .addComponent(cancelHelpRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(submitRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 764, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(232, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(23, 23, 23)
                 .addComponent(submitRequest)
-                .addGap(59, 59, 59)
+                .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(viewYourProfile)
@@ -281,9 +292,9 @@ public class SubmitHelpRequestJPanel extends javax.swing.JPanel {
                             .addComponent(gender1))))
                 .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submitHelpRequest)
-                    .addComponent(cancelHelpRequest))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                    .addComponent(submitHelpRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cancelHelpRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(backJButton)
                 .addGap(17, 17, 17))
         );

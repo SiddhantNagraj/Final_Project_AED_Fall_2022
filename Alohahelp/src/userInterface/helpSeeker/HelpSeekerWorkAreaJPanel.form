@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="66" green="66" red="ff" type="rgb"/>
+    </Property>
+  </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -18,23 +23,25 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
-                      <Component id="manageEnt" min="-2" pref="306" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
-                      <Component id="manageHelpSeekerProfile" min="-2" pref="661" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                          <Component id="manageEnt" min="-2" pref="505" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                          <Component id="manageHelpSeekerProfile" min="-2" pref="520" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="writeTestimonialForVolBtn" alignment="1" min="-2" pref="646" max="-2" attributes="0"/>
-                          <Component id="manageHelpFromVolunteer" alignment="1" min="-2" pref="646" max="-2" attributes="0"/>
+                          <Component id="writeTestimonialForVolBtn" alignment="1" min="-2" pref="520" max="-2" attributes="0"/>
+                          <Component id="manageHelpFromVolunteer" alignment="1" min="-2" pref="520" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="359" max="32767" attributes="0"/>
+              <EmptySpace pref="552" max="32767" attributes="0"/>
               <Component id="alertsPanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
           </Group>
@@ -49,14 +56,14 @@
                       <Component id="alertsPanel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       <Component id="manageEnt" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
-                      <Component id="manageHelpSeekerProfile" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="writeTestimonialForVolBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="manageHelpFromVolunteer" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                      <Component id="manageHelpSeekerProfile" min="-2" pref="75" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <Component id="writeTestimonialForVolBtn" min="-2" pref="68" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="manageHelpFromVolunteer" min="-2" pref="75" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="643" max="32767" attributes="0"/>
@@ -67,6 +74,9 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="manageHelpSeekerProfile">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manage Profile and Vital Signs"/>
       </Properties>
       <Events>
@@ -75,6 +85,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="writeTestimonialForVolBtn">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Write Testimonial for Volunteer"/>
       </Properties>
       <Events>
@@ -84,7 +97,7 @@
     <Component class="javax.swing.JLabel" name="manageEnt">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Malayalam MN" size="24" style="3"/>
+          <Font name="Rockwell" size="36" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Help Seeker Work Area"/>
       </Properties>
@@ -92,7 +105,7 @@
     <Container class="javax.swing.JPanel" name="alertsPanel">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="cc" red="99" type="rgb"/>
+          <Color blue="60" green="47" red="dc" type="rgb"/>
         </Property>
       </Properties>
 
@@ -111,6 +124,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="manageHelpFromVolunteer">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manage Help From Volunteer"/>
       </Properties>
       <Events>

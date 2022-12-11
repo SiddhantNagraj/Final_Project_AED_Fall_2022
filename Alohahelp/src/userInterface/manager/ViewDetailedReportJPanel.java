@@ -56,13 +56,14 @@ public class ViewDetailedReportJPanel extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+    
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
     
      public void populateTopVolunteerTableDetails()
     {
@@ -133,7 +134,9 @@ public class ViewDetailedReportJPanel extends javax.swing.JPanel {
         backJButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
-        volunteerPanel.setBackground(new java.awt.Color(204, 255, 153));
+        setBackground(new java.awt.Color(255, 102, 102));
+
+        volunteerPanel.setBackground(new java.awt.Color(220, 71, 96));
 
         volTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -145,7 +148,7 @@ public class ViewDetailedReportJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(volTable);
 
-        jLabel6.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Rockwell", 1, 24)); // NOI18N
         jLabel6.setText("Top Volunteers");
 
         javax.swing.GroupLayout volunteerPanelLayout = new javax.swing.GroupLayout(volunteerPanel);
@@ -153,26 +156,23 @@ public class ViewDetailedReportJPanel extends javax.swing.JPanel {
         volunteerPanelLayout.setHorizontalGroup(
             volunteerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(volunteerPanelLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
                 .addGroup(volunteerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(volunteerPanelLayout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(volunteerPanelLayout.createSequentialGroup()
-                        .addGap(143, 143, 143)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
         volunteerPanelLayout.setVerticalGroup(
             volunteerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(volunteerPanelLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(38, 38, 38)
                 .addComponent(jLabel6)
-                .addGap(31, 31, 31)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(126, Short.MAX_VALUE))
         );
 
-        donorPanel.setBackground(new java.awt.Color(204, 255, 153));
+        donorPanel.setBackground(new java.awt.Color(220, 71, 96));
 
         donTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -192,7 +192,7 @@ public class ViewDetailedReportJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(donTable);
 
-        jLabel8.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Rockwell", 1, 24)); // NOI18N
         jLabel8.setText("Top Donors");
 
         javax.swing.GroupLayout donorPanelLayout = new javax.swing.GroupLayout(donorPanel);
@@ -200,25 +200,23 @@ public class ViewDetailedReportJPanel extends javax.swing.JPanel {
         donorPanelLayout.setHorizontalGroup(
             donorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(donorPanelLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
                 .addGroup(donorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(donorPanelLayout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(donorPanelLayout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(103, Short.MAX_VALUE))
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         donorPanelLayout.setVerticalGroup(
             donorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(donorPanelLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(40, 40, 40)
                 .addComponent(jLabel8)
-                .addGap(35, 35, 35)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(131, Short.MAX_VALUE))
         );
 
+        backJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         backJButton.setText("<< Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -226,8 +224,8 @@ public class ViewDetailedReportJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
-        jLabel7.setText("Heart Help");
+        jLabel7.setFont(new java.awt.Font("Rockwell", 1, 24)); // NOI18N
+        jLabel7.setText("AlohaHelp");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -246,15 +244,16 @@ public class ViewDetailedReportJPanel extends javax.swing.JPanel {
                         .addGap(39, 39, 39)
                         .addComponent(donorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(501, 501, 501)
+                        .addGap(533, 533, 533)
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(164, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(donorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(volunteerPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))

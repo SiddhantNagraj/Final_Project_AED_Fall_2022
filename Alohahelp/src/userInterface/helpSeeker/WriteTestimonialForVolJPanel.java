@@ -56,13 +56,13 @@ public class WriteTestimonialForVolJPanel extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
     
     public void populateHelpReqJTable()
     {
@@ -124,11 +124,13 @@ public class WriteTestimonialForVolJPanel extends javax.swing.JPanel {
         ViewVolunteerProfileBtn = new javax.swing.JButton();
         backJButton = new javax.swing.JButton();
 
-        manageEnt.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        setBackground(new java.awt.Color(220, 71, 96));
+
+        manageEnt.setFont(new java.awt.Font("Malayalam MN", 1, 14)); // NOI18N
         manageEnt.setText("Write Testimonial");
 
-        manageEnt1.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
-        manageEnt1.setText("Heart Help ");
+        manageEnt1.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
+        manageEnt1.setText("AlohaHelp ");
 
         helpRequestsJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -155,6 +157,7 @@ public class WriteTestimonialForVolJPanel extends javax.swing.JPanel {
             }
         });
 
+        writeTestPanel.setBackground(new java.awt.Color(255, 102, 102));
         writeTestPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         submitTestimnialBtn.setText("Submit");
@@ -164,6 +167,7 @@ public class WriteTestimonialForVolJPanel extends javax.swing.JPanel {
             }
         });
 
+        LastName.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         LastName.setText("Last Name:");
 
         cancelBtn.setText("Cancel");
@@ -187,8 +191,10 @@ public class WriteTestimonialForVolJPanel extends javax.swing.JPanel {
         firstNameField.setEditable(false);
         firstNameField.setEnabled(false);
 
+        firstName.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         firstName.setText("First Name:");
 
+        firstName1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         firstName1.setText("Help Recieved");
 
         serviceTypeTxtField.setEditable(false);
@@ -198,22 +204,48 @@ public class WriteTestimonialForVolJPanel extends javax.swing.JPanel {
         testiTxtAreaField.setRows(5);
         jScrollPane1.setViewportView(testiTxtAreaField);
 
+        LastName1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         LastName1.setText("Help Type:");
 
         viewYourProfile1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         viewYourProfile1.setText("Help Recieved:");
 
+        LastName2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         LastName2.setText("Testimonial");
+
+        writeTestPanel.setLayer(submitTestimnialBtn, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        writeTestPanel.setLayer(LastName, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        writeTestPanel.setLayer(cancelBtn, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        writeTestPanel.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        writeTestPanel.setLayer(lastNameField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        writeTestPanel.setLayer(viewYourProfile, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        writeTestPanel.setLayer(helpNameTxtField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        writeTestPanel.setLayer(firstNameField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        writeTestPanel.setLayer(firstName, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        writeTestPanel.setLayer(firstName1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        writeTestPanel.setLayer(serviceTypeTxtField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        writeTestPanel.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        writeTestPanel.setLayer(LastName1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        writeTestPanel.setLayer(viewYourProfile1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        writeTestPanel.setLayer(LastName2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout writeTestPanelLayout = new javax.swing.GroupLayout(writeTestPanel);
         writeTestPanel.setLayout(writeTestPanelLayout);
         writeTestPanelLayout.setHorizontalGroup(
             writeTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(writeTestPanelLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(writeTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(writeTestPanelLayout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(89, 89, 89)
+                        .addComponent(cancelBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(submitTestimnialBtn))
+                    .addGroup(writeTestPanelLayout.createSequentialGroup()
                         .addGroup(writeTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(writeTestPanelLayout.createSequentialGroup()
+                                .addGap(130, 130, 130)
+                                .addComponent(jLabel1))
                             .addComponent(viewYourProfile)
                             .addGroup(writeTestPanelLayout.createSequentialGroup()
                                 .addGroup(writeTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,27 +257,21 @@ public class WriteTestimonialForVolJPanel extends javax.swing.JPanel {
                                     .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(viewYourProfile1)
                             .addGroup(writeTestPanelLayout.createSequentialGroup()
-                                .addGap(112, 112, 112)
-                                .addComponent(submitTestimnialBtn)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cancelBtn))
-                            .addGroup(writeTestPanelLayout.createSequentialGroup()
                                 .addGroup(writeTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(LastName1)
-                                    .addComponent(firstName1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(LastName2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(writeTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(LastName2)
+                                    .addComponent(firstName1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(writeTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(writeTestPanelLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(writeTestPanelLayout.createSequentialGroup()
+                                        .addGap(59, 59, 59)
                                         .addGroup(writeTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(serviceTypeTxtField, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(helpNameTxtField))
-                                        .addGap(183, 183, 183))))))
-                    .addGroup(writeTestPanelLayout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addComponent(jLabel1)))
-                .addContainerGap(28, Short.MAX_VALUE))
+                                            .addComponent(serviceTypeTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(helpNameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
         writeTestPanelLayout.setVerticalGroup(
             writeTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -269,7 +295,7 @@ public class WriteTestimonialForVolJPanel extends javax.swing.JPanel {
                 .addGap(16, 16, 16)
                 .addGroup(writeTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LastName1)
-                    .addComponent(serviceTypeTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(serviceTypeTxtField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(writeTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(writeTestPanelLayout.createSequentialGroup()
                         .addGap(52, 52, 52)
@@ -279,27 +305,12 @@ public class WriteTestimonialForVolJPanel extends javax.swing.JPanel {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(writeTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submitTestimnialBtn)
-                    .addComponent(cancelBtn))
-                .addContainerGap())
+                    .addComponent(cancelBtn)
+                    .addComponent(submitTestimnialBtn))
+                .addGap(12, 12, 12))
         );
-        writeTestPanel.setLayer(submitTestimnialBtn, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        writeTestPanel.setLayer(LastName, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        writeTestPanel.setLayer(cancelBtn, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        writeTestPanel.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        writeTestPanel.setLayer(lastNameField, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        writeTestPanel.setLayer(viewYourProfile, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        writeTestPanel.setLayer(helpNameTxtField, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        writeTestPanel.setLayer(firstNameField, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        writeTestPanel.setLayer(firstName, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        writeTestPanel.setLayer(firstName1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        writeTestPanel.setLayer(serviceTypeTxtField, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        writeTestPanel.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        writeTestPanel.setLayer(LastName1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        writeTestPanel.setLayer(viewYourProfile1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        writeTestPanel.setLayer(LastName2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ViewVolunteerProfileBtn.setText("View Volunteer Profile");
         ViewVolunteerProfileBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -320,35 +331,32 @@ public class WriteTestimonialForVolJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(ViewVolunteerProfileBtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(writeTestimonialBtn))
                             .addComponent(manageEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(backJButton))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(ViewVolunteerProfileBtn)
-                        .addGap(53, 53, 53)
-                        .addComponent(writeTestimonialBtn)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                            .addComponent(manageEnt1)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(backJButton)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                 .addComponent(writeTestPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(377, 377, 377)
-                    .addComponent(manageEnt1)
-                    .addContainerGap(609, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
+                        .addComponent(manageEnt1)
+                        .addGap(33, 33, 33)
                         .addComponent(manageEnt)
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -356,17 +364,10 @@ public class WriteTestimonialForVolJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ViewVolunteerProfileBtn)
                             .addComponent(writeTestimonialBtn))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(33, 33, 33)
                         .addComponent(backJButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(writeTestPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(writeTestPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(35, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(33, 33, 33)
-                    .addComponent(manageEnt1)
-                    .addContainerGap(454, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
