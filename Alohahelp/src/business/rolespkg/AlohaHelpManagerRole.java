@@ -10,18 +10,18 @@ import business.enterprisemainpkg.Enterprise;
 import business.orgapkg.Orga;
 import business.userAccountpkg.UserAc;
 import javax.swing.JPanel;
-import userInterface.manager.HeartHelpEnterpriseManagerWorkArea;
+import userInterface.manager.AlohaHelpEnterpriseManagerWorkArea;
 
 /**
  *
  * @author Siddhant
  */
-public class HeartHelpManagerRole extends Role{
+public class AlohaHelpManagerRole extends Role{
     
        @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAc account, 
             Orga organization, Enterprise enterprise, EcoSystem business) {
-        return new HeartHelpEnterpriseManagerWorkArea(userProcessContainer, enterprise,business, account);
+        return new AlohaHelpEnterpriseManagerWorkArea(userProcessContainer, enterprise,business, account);
     }
     @Override
     public String toString() {

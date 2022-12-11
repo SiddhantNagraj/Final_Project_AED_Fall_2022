@@ -5,7 +5,7 @@
  */
 package business.orgapkg;
 
-import business.rolespkg.HeartHelpManagerRole;
+import business.rolespkg.AlohaHelpManagerRole;
 import business.rolespkg.Role;
 import business.rolespkg.SupervisorRole;
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class SupervOrga extends Orga {
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList<>();
         roles.add(new SupervisorRole());
-        roles.add(new HeartHelpManagerRole());
+        roles.add(new AlohaHelpManagerRole());
         return roles;
     }
     

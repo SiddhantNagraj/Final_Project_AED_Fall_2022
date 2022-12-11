@@ -212,7 +212,7 @@ public class Validation {
          {
           for(Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList())
           {
-            if(enterprise.getEnterpriseType().equals(Enterprise.EnterpriseType.HeartHelp))
+            if(enterprise.getEnterpriseType().equals(Enterprise.EnterpriseType.AlohaHelp))
             {
             for(Orga organization : enterprise.getOrganizationDirectory().getOrganizationList())
             {

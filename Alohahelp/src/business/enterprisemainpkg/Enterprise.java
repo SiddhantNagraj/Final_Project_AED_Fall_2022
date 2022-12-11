@@ -35,7 +35,7 @@ public abstract class Enterprise extends Orga{
     public enum EnterpriseType{
         
        School("School"),
-       HeartHelp("HeartHelp"),
+       AlohaHelp("AlohaHelp"),
        NonProfit("NonProfit"),
        Government("Government"),
        Hospital("Hospital");

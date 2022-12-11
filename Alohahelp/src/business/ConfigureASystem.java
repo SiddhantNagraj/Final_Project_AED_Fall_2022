@@ -9,7 +9,7 @@ import business.rolespkg.AdminRole;
 import business.rolespkg.DoctorRole;
 import business.rolespkg.DonorRole;
 import business.rolespkg.DriverRole;
-import business.rolespkg.HeartHelpManagerRole;
+import business.rolespkg.AlohaHelpManagerRole;
 import business.rolespkg.MayorRole;
 import business.rolespkg.SupervisorRole;
 import business.rolespkg.SystemAdminRole;
@@ -79,10 +79,10 @@ public class ConfigureASystem {
         account.setNetwork(network);
         account.setEnabled(true);
         
-      // Heart Help
-         enterprise = network.getEnterpriseDirectory().addEnterprise("BostonHeartHelp", Enterprise.EnterpriseType.HeartHelp);
+      // AlohaHelp
+         enterprise = network.getEnterpriseDirectory().addEnterprise("AlohaHelp", Enterprise.EnterpriseType.AlohaHelp);
          person = enterprise.getPersonDirectory().addPerson();
-        person.setLastName("Heart Help Admin");
+        person.setLastName("Aloha Help Admin");
         person.setName();
          account = enterprise.getUserAccountDirectory().addUserAccount("bhh", "bhh", person, new AdminRole());
         account.setEnabled(true);
@@ -107,7 +107,7 @@ public class ConfigureASystem {
         person.setLastName("Boston");
         person.setName();
         
-        account = organization.getUserAccountDirectory().addUserAccount("bman", "bman", person, new HeartHelpManagerRole());
+        account = organization.getUserAccountDirectory().addUserAccount("bman", "bman", person, new AlohaHelpManagerRole());
         account.setNetwork(network);
         account.setEnabled(true);
         

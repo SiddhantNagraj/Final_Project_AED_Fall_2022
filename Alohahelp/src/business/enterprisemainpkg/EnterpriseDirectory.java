@@ -24,9 +24,9 @@ public class EnterpriseDirectory {
     public Enterprise addEnterprise(String name, Enterprise.EnterpriseType type)
     {
       Enterprise enterprise = null;
-      if(type ==Enterprise.EnterpriseType.HeartHelp)
+      if(type ==Enterprise.EnterpriseType.AlohaHelp)
       {
-       enterprise = new HeartHelpEnterprise(name);
+       enterprise = new AlohaHelpEnterprise(name);
        enterpriseList.add(enterprise);     
       }
       else if (type == Enterprise.EnterpriseType.Government){

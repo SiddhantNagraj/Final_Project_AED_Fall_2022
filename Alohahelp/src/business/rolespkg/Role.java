@@ -24,7 +24,7 @@ public abstract class Role {
         HelpSeeker("Help Seeker"),
         Driver("Driver"),
         Mayor("Mayor"),
-        HeartHelpManager("Heart Help Manager"),
+        AlohaHelpManager("Aloha Help Manager"),
         Doctor("Doctor"),
         Donor("Donor");
         
