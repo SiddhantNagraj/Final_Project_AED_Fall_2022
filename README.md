@@ -22,4 +22,5 @@ Class Diagram
 
 
 Sequence Diagram
-----------------
+---------------- 
+(https://user-images.githubusercontent.com/114314499/206932537-787eb0bc-2f12-4020-a692-d0b54d5fdf90.png)
