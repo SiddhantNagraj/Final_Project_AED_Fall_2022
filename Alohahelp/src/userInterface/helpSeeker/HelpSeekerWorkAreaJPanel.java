@@ -49,7 +49,7 @@ public class HelpSeekerWorkAreaJPanel extends javax.swing.JPanel {
         this.enterprise = enterprise; 
         this.userAccount = userAccount;
         this.ecoSystem = ecoSystem;
-        setBackground(new Color(182,201,233));
+        setBackground(new Color(220,71,96));
        
        
         person  = (HelpSeeker)userAccount.getPerson();
