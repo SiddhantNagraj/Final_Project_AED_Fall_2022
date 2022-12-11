@@ -49,24 +49,23 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
     private EcoSystem ecoSystem;
     private VolunteerOrga volOrg;
     
-    private final JLabel zoomLabel;
+  /*  private final JLabel zoomLabel;
     private final JLabel zoomValue;
 
     private final JLabel mperpLabelName;
     private final JLabel mperpLabelValue;
     
-    private final JMapViewerTree treeMap;
+    private final JMapViewerTree treeMap;*/
    
     /**
      * Creates new form SearchForVolunteerJPanel
      */
-    public SearchForVolunteerJPanel(JPanel userProcessContainer, UserAc userAccount, EcoSystem ecoSystem) {
+   public SearchForVolunteerJPanel(JPanel userProcessContainer, UserAc userAccount, EcoSystem ecoSystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = userAccount;
         this.ecoSystem = ecoSystem;
         
-         treeMap = new JMapViewerTree("Zones");
          
         // map().addJMVListener(this);
        
@@ -74,15 +73,15 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
         setBackground(new Color(182,201,233));
          
        
-        mperpLabelName = new JLabel("Meters/Pixels: ");
-        mperpLabelValue = new JLabel(String.format("%s", jMapViewerVolunteer.getMeterPerPixel()));
+      //  mperpLabelName = new JLabel("Meters/Pixels: ");
+       // mperpLabelValue = new JLabel(String.format("%s", jMapViewerVolunteer.getMeterPerPixel()));
 
-        zoomLabel = new JLabel("Zoom: ");
-        zoomValue = new JLabel(String.format("%s", jMapViewerVolunteer.getZoom()));
+       // zoomLabel = new JLabel("Zoom: ");
+     //   zoomValue = new JLabel(String.format("%s", jMapViewerVolunteer.getZoom()));
         
         populateMApToViewVolunteers();
-        zoomValue.setVisible(true);
-        zoomLabel.setVisible(true);
+        //zoomValue.setVisible(true);
+       // zoomLabel.setVisible(true);
         
         
     }
@@ -107,13 +106,13 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
     
     public void populateNetworkComboBox()
     {
@@ -127,13 +126,13 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
     
     public void populateMApToViewVolunteers()
     {
-     jMapViewerVolunteer.repaint();
-     jMapViewerVolunteer.revalidate();
+     //jMapViewerVolunteer.repaint();
+     //jMapViewerVolunteer.revalidate();
         
      //jInternalFrame1.setMaximizable(true);
      //jInternalFrame1.setResizable(true);
     // jxMapViewer.addJMVListener(this);
-     jMapViewerVolunteer.setZoom(12);
+    // jMapViewerVolunteer.setZoom(12);
      
     List<Coordinate> points = new ArrayList<>();
     ICoordinate iCoordinate = new Coordinate(42.2875968, -71.0794968);
@@ -150,8 +149,8 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
       {
        for(UserAc volunteerAccnt : volOrg.getUserAccountDirectory().getUserAccountList())
        {
-        if(volunteerAccnt.isEnabled())
-        {
+       // if(volunteerAccnt.isEnabled())
+        //{
         Volunteer volunteer = (Volunteer)volunteerAccnt.getPerson();    
           
            String la = volunteer.getLatitiude();
@@ -175,7 +174,7 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
            
            // jxMapViewer.addMapMarker(markerDot);
             flag = true;
-            }
+         //   }
             
         }
        }
@@ -214,8 +213,8 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
 
      for(UserAc volunteerAccnt : volOrg.getUserAccountDirectory().getUserAccountList())
        {
-        if(volunteerAccnt.isEnabled())
-        {
+       // if(volunteerAccnt.isEnabled())
+       // {
         Volunteer volunteer = (Volunteer)volunteerAccnt.getPerson();    
         if(volunteerAccnt.getNetwork().getCity().equals(network.getCity()))
         {
@@ -227,7 +226,7 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
             row[4] = volunteerAccnt;
             model.addRow(row);   
         }
-        }
+      //  }
        }
     }
     /**
@@ -248,9 +247,9 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
         volunteerListTable = new javax.swing.JTable();
         ViewVolunteerProfileBtn = new javax.swing.JButton();
         requestVolunteerHelpbtn = new javax.swing.JButton();
-        jInternalFrame1 = new javax.swing.JInternalFrame();
-        jMapViewerVolunteer = new org.openstreetmap.gui.jmapviewer.JMapViewer();
         backJButton1 = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(220, 71, 96));
 
         networkListComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -258,12 +257,13 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
             }
         });
 
-        manageEnt1.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        manageEnt1.setFont(new java.awt.Font("Malayalam MN", 1, 14)); // NOI18N
         manageEnt1.setText("Search For Volunteer");
 
-        manageEnt2.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
-        manageEnt2.setText("Heart Help");
+        manageEnt2.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
+        manageEnt2.setText("AlohaHelp");
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel1.setText("Network:");
 
         volunteerListTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -291,6 +291,7 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
             volunteerListTable.getColumnModel().getColumn(4).setResizable(false);
         }
 
+        ViewVolunteerProfileBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         ViewVolunteerProfileBtn.setText("View Volunteer Profile");
         ViewVolunteerProfileBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -298,6 +299,7 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
             }
         });
 
+        requestVolunteerHelpbtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         requestVolunteerHelpbtn.setText("Request Volunteer For Help");
         requestVolunteerHelpbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -305,22 +307,7 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
             }
         });
 
-        jInternalFrame1.setVisible(true);
-
-        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jMapViewerVolunteer, javax.swing.GroupLayout.PREFERRED_SIZE, 712, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jInternalFrame1Layout.setVerticalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jMapViewerVolunteer, javax.swing.GroupLayout.DEFAULT_SIZE, 523, Short.MAX_VALUE)
-        );
-
+        backJButton1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         backJButton1.setText("<< Back");
         backJButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -333,57 +320,53 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(backJButton1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(requestVolunteerHelpbtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ViewVolunteerProfileBtn)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(manageEnt2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(155, 155, 155)
+                        .addComponent(networkListComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(networkListComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(manageEnt1, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(requestVolunteerHelpbtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ViewVolunteerProfileBtn))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(backJButton1)))
-                .addGap(27, 27, 27)
-                .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(manageEnt1, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(manageEnt2, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(368, 368, 368))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
                 .addComponent(manageEnt2)
-                .addGap(18, 18, 18)
+                .addGap(48, 48, 48)
                 .addComponent(manageEnt1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(networkListComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(requestVolunteerHelpbtn)
-                    .addComponent(ViewVolunteerProfileBtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(backJButton1)
-                .addGap(25, 25, 25))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(networkListComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(209, 209, 209)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(requestVolunteerHelpbtn)
+                            .addComponent(ViewVolunteerProfileBtn))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                        .addComponent(backJButton1)
+                        .addGap(68, 68, 68))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -444,10 +427,8 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ViewVolunteerProfileBtn;
     private javax.swing.JButton backJButton1;
-    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private org.openstreetmap.gui.jmapviewer.JMapViewer jMapViewer1;
-    private org.openstreetmap.gui.jmapviewer.JMapViewer jMapViewerVolunteer;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel manageEnt1;
     private javax.swing.JLabel manageEnt2;
@@ -467,7 +448,7 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
      private void updateZoomParameters() {
         //if (mperpLabelValue != null)
           //  mperpLabelValue.setText(String.format("%s", jxMapViewer.getMeterPerPixel()));
-        if (zoomValue != null)
-            zoomValue.setText(String.format("%s", jMapViewerVolunteer.getZoom()));
+     //   if (zoomValue != null)
+       //     zoomValue.setText(String.format("%s", jMapViewerVolunteer.getZoom()));
     }
 }
