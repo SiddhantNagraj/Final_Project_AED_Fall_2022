@@ -15,3 +15,8 @@ What is this project about?
 ---------------------------
 Alhohelp is an application for elderly people who are unable to do their day to day chores. Via this application these people in need will be connected to Volunteers who can help them.
 
+
+Class Diagram
+-------------
+(https://user-images.githubusercontent.com/114314499/206932400-bbc0f48f-25aa-4dc7-b869-6d0ea4dc007b.png)
+
