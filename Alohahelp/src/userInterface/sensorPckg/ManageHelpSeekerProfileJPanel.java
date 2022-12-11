@@ -32,7 +32,7 @@ public class ManageHelpSeekerProfileJPanel extends javax.swing.JPanel {
    private EcoSystem ecoSystem;
     
     /**
-     * Creates new form GetAlertFromHeartHelpJPanel
+     * Creates new form GetAlertFromAlohaHelpJPanel
      */
     public ManageHelpSeekerProfileJPanel(JPanel userProcessContainer, UserAc userAccount, Enterprise enterprise, EcoSystem ecoSystem) {
         initComponents();
@@ -54,13 +54,13 @@ public class ManageHelpSeekerProfileJPanel extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -81,9 +81,12 @@ public class ManageHelpSeekerProfileJPanel extends javax.swing.JPanel {
         SendVitalDataToDoctorBtn = new javax.swing.JButton();
         viewVitalSignInfo = new javax.swing.JButton();
 
-        getAlertFromHH.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        setBackground(new java.awt.Color(220, 71, 96));
+
+        getAlertFromHH.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
         getAlertFromHH.setText("Manage Help Seeker Profile ");
 
+        manageVitalSignJBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         manageVitalSignJBtn.setText("Manage Vital Signs");
         manageVitalSignJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +94,7 @@ public class ManageHelpSeekerProfileJPanel extends javax.swing.JPanel {
             }
         });
 
+        viewAndUpdateProfileBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         viewAndUpdateProfileBtn.setText("View / Update Profile");
         viewAndUpdateProfileBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +104,7 @@ public class ManageHelpSeekerProfileJPanel extends javax.swing.JPanel {
 
         helpSeekerName.setText("Help Seeker Name");
 
+        backJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         backJButton.setText("<< Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,6 +112,7 @@ public class ManageHelpSeekerProfileJPanel extends javax.swing.JPanel {
             }
         });
 
+        viewVitalSignHistory.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         viewVitalSignHistory.setText("View Vital Sign History");
         viewVitalSignHistory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,6 +120,7 @@ public class ManageHelpSeekerProfileJPanel extends javax.swing.JPanel {
             }
         });
 
+        SendVitalDataToDoctorBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         SendVitalDataToDoctorBtn.setText("Send Vital Info To Doctor");
         SendVitalDataToDoctorBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,6 +128,7 @@ public class ManageHelpSeekerProfileJPanel extends javax.swing.JPanel {
             }
         });
 
+        viewVitalSignInfo.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         viewVitalSignInfo.setText("View Vital Sign Info");
         viewVitalSignInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,52 +140,59 @@ public class ManageHelpSeekerProfileJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(295, 295, 295)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(getAlertFromHH, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(277, 277, 277))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(helpSeekerName, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(421, 421, 421))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(manageVitalSignJBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(113, 113, 113)
+                        .addComponent(SendVitalDataToDoctorBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
+                        .addGap(310, 310, 310))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(473, 473, 473)
+                .addComponent(viewVitalSignInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addComponent(getAlertFromHH, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(helpSeekerName, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(295, 295, 295)
+                        .addComponent(viewAndUpdateProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(113, 113, 113)
+                        .addComponent(viewVitalSignHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(303, 303, 303)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(viewAndUpdateProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(manageVitalSignJBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addGap(303, 303, 303)
-                            .addComponent(viewVitalSignHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(SendVitalDataToDoctorBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
-                                .addComponent(viewVitalSignInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(73, 73, 73)
+                        .addGap(519, 519, 519)
                         .addComponent(backJButton)))
-                .addContainerGap(399, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(getAlertFromHH)
-                    .addComponent(helpSeekerName, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(66, 66, 66)
-                .addComponent(viewAndUpdateProfileBtn)
-                .addGap(18, 18, 18)
-                .addComponent(manageVitalSignJBtn)
-                .addGap(18, 18, 18)
-                .addComponent(viewVitalSignHistory)
-                .addGap(18, 18, 18)
-                .addComponent(SendVitalDataToDoctorBtn)
-                .addGap(18, 18, 18)
+                .addGap(38, 38, 38)
+                .addComponent(getAlertFromHH)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(helpSeekerName, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(viewAndUpdateProfileBtn)
+                            .addComponent(viewVitalSignHistory))
+                        .addGap(39, 39, 39)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(manageVitalSignJBtn)
+                            .addComponent(SendVitalDataToDoctorBtn))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(viewVitalSignInfo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addGap(55, 55, 55)
                 .addComponent(backJButton)
-                .addGap(41, 41, 41))
+                .addGap(99, 99, 99))
         );
     }// </editor-fold>//GEN-END:initComponents
 

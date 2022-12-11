@@ -54,13 +54,13 @@ public class SendVitalSignDataToDoctorPanel extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -85,8 +85,12 @@ public class SendVitalSignDataToDoctorPanel extends javax.swing.JPanel {
         getAlertFromHH = new javax.swing.JLabel();
         backBtn = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(220, 71, 96));
+
+        sendToDoctorPanel.setBackground(new java.awt.Color(255, 153, 153));
         sendToDoctorPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        medications.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         medications.setText("Enter Current Medications:");
 
         sendToDoctorGroup.add(sendToDoctNoRadio);
@@ -107,8 +111,10 @@ public class SendVitalSignDataToDoctorPanel extends javax.swing.JPanel {
 
         doctorComboBx.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        dctrNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         dctrNameLabel.setText("Please Select a doctor you wish to send data");
 
+        sendDataTodctrBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         sendDataTodctrBtn.setText("Send Vital Sign Data to Doctor");
         sendDataTodctrBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,14 +126,24 @@ public class SendVitalSignDataToDoctorPanel extends javax.swing.JPanel {
         currentMedicationsTxtArea.setRows(5);
         jScrollPane1.setViewportView(currentMedicationsTxtArea);
 
+        sendDataLabel.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         sendDataLabel.setText("Do you want to send data to Doctor");
+
+        sendToDoctorPanel.setLayer(medications, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        sendToDoctorPanel.setLayer(sendToDoctNoRadio, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        sendToDoctorPanel.setLayer(sendToDoctorYesRad, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        sendToDoctorPanel.setLayer(doctorComboBx, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        sendToDoctorPanel.setLayer(dctrNameLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        sendToDoctorPanel.setLayer(sendDataTodctrBtn, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        sendToDoctorPanel.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        sendToDoctorPanel.setLayer(sendDataLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout sendToDoctorPanelLayout = new javax.swing.GroupLayout(sendToDoctorPanel);
         sendToDoctorPanel.setLayout(sendToDoctorPanelLayout);
         sendToDoctorPanelLayout.setHorizontalGroup(
             sendToDoctorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sendToDoctorPanelLayout.createSequentialGroup()
-                .addGap(81, 81, 81)
+                .addGap(36, 36, 36)
                 .addGroup(sendToDoctorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(sendDataTodctrBtn)
                     .addGroup(sendToDoctorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,7 +151,7 @@ public class SendVitalSignDataToDoctorPanel extends javax.swing.JPanel {
                             .addGroup(sendToDoctorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(sendDataLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(dctrNameLabel))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGap(57, 57, 57)
                             .addGroup(sendToDoctorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(doctorComboBx, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(sendToDoctorPanelLayout.createSequentialGroup()
@@ -144,9 +160,9 @@ public class SendVitalSignDataToDoctorPanel extends javax.swing.JPanel {
                                     .addComponent(sendToDoctNoRadio))))
                         .addGroup(sendToDoctorPanelLayout.createSequentialGroup()
                             .addComponent(medications)
-                            .addGap(29, 29, 29)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(75, Short.MAX_VALUE))
+                            .addGap(177, 177, 177)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         sendToDoctorPanelLayout.setVerticalGroup(
             sendToDoctorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,22 +180,15 @@ public class SendVitalSignDataToDoctorPanel extends javax.swing.JPanel {
                 .addGroup(sendToDoctorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(medications)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addComponent(sendDataTodctrBtn)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
+                .addComponent(sendDataTodctrBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(52, Short.MAX_VALUE))
         );
-        sendToDoctorPanel.setLayer(medications, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        sendToDoctorPanel.setLayer(sendToDoctNoRadio, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        sendToDoctorPanel.setLayer(sendToDoctorYesRad, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        sendToDoctorPanel.setLayer(doctorComboBx, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        sendToDoctorPanel.setLayer(dctrNameLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        sendToDoctorPanel.setLayer(sendDataTodctrBtn, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        sendToDoctorPanel.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        sendToDoctorPanel.setLayer(sendDataLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        getAlertFromHH.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        getAlertFromHH.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
         getAlertFromHH.setText("Send Vital Sign Data to Doctor");
 
+        backBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         backBtn.setText("<< Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,28 +201,23 @@ public class SendVitalSignDataToDoctorPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(153, 153, 153)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(262, 262, 262)
-                        .addComponent(getAlertFromHH, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(153, 153, 153)
-                        .addComponent(sendToDoctorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(backBtn)))
-                .addContainerGap(209, Short.MAX_VALUE))
+                    .addComponent(getAlertFromHH, javax.swing.GroupLayout.PREFERRED_SIZE, 625, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sendToDoctorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(225, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(42, 42, 42)
                 .addComponent(getAlertFromHH)
-                .addGap(35, 35, 35)
+                .addGap(18, 18, 18)
                 .addComponent(sendToDoctorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                .addComponent(backBtn)
-                .addGap(44, 44, 44))
+                .addGap(18, 18, 18)
+                .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(52, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

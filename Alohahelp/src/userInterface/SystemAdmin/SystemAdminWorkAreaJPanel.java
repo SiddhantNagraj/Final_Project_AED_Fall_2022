@@ -52,13 +52,13 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
 
     public void populatenetworkJTree() {
         
@@ -122,8 +122,6 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         manageNetworkJButton = new javax.swing.JButton();
         manageAdminJButton = new javax.swing.JButton();
         manageEnterpriseJButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        selectedNodeJLabel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         helpOfferedButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -136,6 +134,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(220, 71, 96));
 
+        manageNetworkJButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         manageNetworkJButton.setText("Manage Network");
         manageNetworkJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,6 +142,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        manageAdminJButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         manageAdminJButton.setText("Manage Enterprise Admin");
         manageAdminJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,6 +150,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        manageEnterpriseJButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         manageEnterpriseJButton.setText("Manage Enterprise");
         manageEnterpriseJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,13 +158,10 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setText("Selected Node:");
-
-        selectedNodeJLabel.setText("<view_selected_node>");
-
-        jLabel7.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Rockwell", 1, 24)); // NOI18N
         jLabel7.setText("System Admin Work Area");
 
+        helpOfferedButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         helpOfferedButton.setText("Create Help Offered ");
         helpOfferedButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,42 +174,33 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(289, 289, 289)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(manageNetworkJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(manageEnterpriseJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(manageEnterpriseJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(manageAdminJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(manageNetworkJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(helpOfferedButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(272, 272, 272)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(selectedNodeJLabel)))
-                .addContainerGap(267, Short.MAX_VALUE))
+                            .addComponent(manageAdminJButton, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
+                            .addComponent(helpOfferedButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(287, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(25, 25, 25)
                 .addComponent(jLabel7)
+                .addGap(119, 119, 119)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(manageNetworkJButton)
+                    .addComponent(manageAdminJButton))
                 .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(selectedNodeJLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
-                .addComponent(manageNetworkJButton)
-                .addGap(34, 34, 34)
-                .addComponent(manageEnterpriseJButton)
-                .addGap(37, 37, 37)
-                .addComponent(manageAdminJButton)
-                .addGap(32, 32, 32)
-                .addComponent(helpOfferedButton)
-                .addGap(98, 98, 98))
+                    .addComponent(manageEnterpriseJButton)
+                    .addComponent(helpOfferedButton))
+                .addContainerGap(254, Short.MAX_VALUE))
         );
 
         jSplitPane1.setRightComponent(jPanel1);
@@ -262,10 +251,10 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_manageNetworkJButtonActionPerformed
 
     private void valueChangedAction(javax.swing.event.TreeSelectionEvent evt) {//GEN-FIRST:event_valueChangedAction
-        DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) networkJTree.getLastSelectedPathComponent();
-        if (selectedNode != null) {
-            selectedNodeJLabel.setText(selectedNode.toString());
-        }
+//        DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) networkJTree.getLastSelectedPathComponent();
+//        if (selectedNode != null) {
+//            selectedNodeJLabel.setText(selectedNode.toString());
+//        }
 
     }//GEN-LAST:event_valueChangedAction
 
@@ -278,7 +267,6 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton helpOfferedButton;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -288,6 +276,5 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton manageEnterpriseJButton;
     private javax.swing.JButton manageNetworkJButton;
     private javax.swing.JTree networkJTree;
-    private javax.swing.JLabel selectedNodeJLabel;
     // End of variables declaration//GEN-END:variables
 }

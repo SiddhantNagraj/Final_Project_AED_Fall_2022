@@ -57,14 +57,14 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
-    
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
+//    
     public void populateWorkRequestTable()
     {
         DefaultTableModel model = (DefaultTableModel)workRequestJTable.getModel();
@@ -122,6 +122,8 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         viewRequestorProfile = new javax.swing.JButton();
         viewProfileBtn = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(220, 71, 96));
+
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -147,12 +149,13 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(workRequestJTable);
 
-        jLabel6.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
         jLabel6.setText("Supervisor Work Area");
 
-        jLabel7.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
         jLabel7.setText("Work Requests:");
 
+        assignJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         assignJButton.setText("Assign to me");
         assignJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,6 +163,7 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        processJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         processJButton.setText("Process");
         processJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,6 +171,7 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        refreshJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         refreshJButton.setText("Refresh");
         refreshJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,6 +179,7 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        updateSupervisorProfile.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         updateSupervisorProfile.setText("Create My Profile");
         updateSupervisorProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,6 +187,7 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        viewReqToBeProcessedBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         viewReqToBeProcessedBtn.setText("View Request to be Processed");
         viewReqToBeProcessedBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,6 +195,7 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        viewRequestorProfile.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         viewRequestorProfile.setText("View Requestor Profile");
         viewRequestorProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,6 +203,7 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        viewProfileBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         viewProfileBtn.setText("View My Profile");
         viewProfileBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,51 +215,44 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
+                .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(290, 290, 290)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(viewReqToBeProcessedBtn))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(265, 265, 265)
-                                        .addComponent(refreshJButton))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(viewRequestorProfile)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(assignJButton)
-                                        .addGap(3, 3, 3)
-                                        .addComponent(processJButton))))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(352, 352, 352)
+                                .addComponent(refreshJButton))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(viewReqToBeProcessedBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(viewRequestorProfile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(processJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(assignJButton, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE))
+                            .addGap(213, 213, 213)))
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(updateSupervisorProfile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(viewProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(viewProfileBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
+                    .addComponent(updateSupervisorProfile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(112, 112, 112))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
                         .addComponent(jLabel6)
-                        .addGap(28, 28, 28)
+                        .addGap(34, 34, 34)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
                             .addComponent(refreshJButton)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
                         .addComponent(viewProfileBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(updateSupervisorProfile)))
@@ -259,10 +261,12 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(assignJButton)
-                    .addComponent(processJButton)
-                    .addComponent(viewReqToBeProcessedBtn)
-                    .addComponent(viewRequestorProfile))
-                .addContainerGap(171, Short.MAX_VALUE))
+                    .addComponent(viewReqToBeProcessedBtn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(viewRequestorProfile)
+                    .addComponent(processJButton))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

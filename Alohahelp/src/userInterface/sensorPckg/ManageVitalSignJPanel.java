@@ -59,13 +59,13 @@ public class ManageVitalSignJPanel extends javax.swing.JPanel {
         
         Color c1 = new Color(220,71,96);
         Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
     }
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
     
    /**
      * This method is called from within the constructor to initialize the form.
@@ -104,7 +104,9 @@ public class ManageVitalSignJPanel extends javax.swing.JPanel {
         hasCardiacYes = new javax.swing.JRadioButton();
         hasCardiacRadioNo = new javax.swing.JRadioButton();
 
-        getAlertFromHH.setFont(new java.awt.Font("Malayalam MN", 3, 24)); // NOI18N
+        setBackground(new java.awt.Color(220, 71, 96));
+
+        getAlertFromHH.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
         getAlertFromHH.setText("Manage Vital Signs");
 
         shareInfoGroup.add(shareVitalInfoJRadioYes);
@@ -123,8 +125,10 @@ public class ManageVitalSignJPanel extends javax.swing.JPanel {
             }
         });
 
+        shareInfo.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         shareInfo.setText("Would you like to share Vital Sign Information with us :");
 
+        submitVitalSignsJBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         submitVitalSignsJBtn.setText("Submit");
         submitVitalSignsJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,6 +136,7 @@ public class ManageVitalSignJPanel extends javax.swing.JPanel {
             }
         });
 
+        cancelJBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         cancelJBtn.setText("Cancel");
 
         vitalSignPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -144,6 +149,7 @@ public class ManageVitalSignJPanel extends javax.swing.JPanel {
             }
         });
 
+        respRateCheckBox.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         respRateCheckBox.setText("Respiratory Rate");
 
         getAlertsGroup.add(getAlertJRadioYes);
@@ -154,12 +160,16 @@ public class ManageVitalSignJPanel extends javax.swing.JPanel {
             }
         });
 
+        sysBPCheckBox.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         sysBPCheckBox.setText("Systollic Blood Pressure");
 
+        weightCheckBox.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         weightCheckBox.setText("Weight");
 
-        getAlert.setText("Would you like to get alert from Heart Help:");
+        getAlert.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        getAlert.setText("Would you like to get alert from AlohaHelp ?");
 
+        sensorDevice.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         sensorDevice.setText("Do you have a sensor device to track Vital Signs");
 
         getAlertsGroup.add(getAlertJRadioNo);
@@ -170,6 +180,7 @@ public class ManageVitalSignJPanel extends javax.swing.JPanel {
             }
         });
 
+        vitalSignsTrck.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         vitalSignsTrck.setText("Please Select Vital Signs you would like to track:");
 
         hasSensorGroup.add(hasSensorRadioNo);
@@ -180,6 +191,7 @@ public class ManageVitalSignJPanel extends javax.swing.JPanel {
             }
         });
 
+        heartRateChckBox.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         heartRateChckBox.setText("Heart Rate");
 
         javax.swing.GroupLayout vitalSignPanelLayout = new javax.swing.GroupLayout(vitalSignPanel);
@@ -187,12 +199,13 @@ public class ManageVitalSignJPanel extends javax.swing.JPanel {
         vitalSignPanelLayout.setHorizontalGroup(
             vitalSignPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(vitalSignPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
                 .addGroup(vitalSignPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(vitalSignsTrck, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(sensorDevice, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(getAlert))
-                .addGap(58, 58, 58)
+                    .addComponent(sensorDevice, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(vitalSignPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(getAlert, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(vitalSignsTrck, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
                 .addGroup(vitalSignPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(weightCheckBox)
                     .addComponent(sysBPCheckBox)
@@ -211,11 +224,10 @@ public class ManageVitalSignJPanel extends javax.swing.JPanel {
             vitalSignPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(vitalSignPanelLayout.createSequentialGroup()
                 .addContainerGap(22, Short.MAX_VALUE)
-                .addGroup(vitalSignPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sensorDevice)
-                    .addGroup(vitalSignPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(hasSensorRadioYes)
-                        .addComponent(hasSensorRadioNo)))
+                .addGroup(vitalSignPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hasSensorRadioYes)
+                    .addComponent(hasSensorRadioNo)
+                    .addComponent(sensorDevice))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(vitalSignPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(vitalSignsTrck)
@@ -234,6 +246,7 @@ public class ManageVitalSignJPanel extends javax.swing.JPanel {
                 .addGap(53, 53, 53))
         );
 
+        backJButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         backJButton.setText("<< Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -241,6 +254,7 @@ public class ManageVitalSignJPanel extends javax.swing.JPanel {
             }
         });
 
+        cardiacProblems.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         cardiacProblems.setText("Do you have Cardiac problems ");
 
         hasCardiacProbGroup.add(hasCardiacYes);
@@ -266,43 +280,42 @@ public class ManageVitalSignJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(286, 286, 286)
-                        .addComponent(getAlertFromHH, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29)
+                        .addComponent(backJButton)
+                        .addGap(251, 251, 251)
+                        .addComponent(submitVitalSignsJBtn)
+                        .addGap(176, 176, 176)
+                        .addComponent(cancelJBtn))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(204, 204, 204)
                         .addComponent(vitalSignPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(backJButton)
-                        .addGap(268, 268, 268)
-                        .addComponent(submitVitalSignsJBtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cancelJBtn))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(228, 228, 228)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGap(243, 243, 243)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(365, 365, 365)
-                                        .addComponent(hasCardiacYes))
-                                    .addComponent(cardiacProblems))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(hasCardiacRadioNo))
+                                .addComponent(cardiacProblems)
+                                .addGap(228, 228, 228)
+                                .addComponent(hasCardiacYes))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(shareInfo)
-                                .addGap(18, 18, 18)
-                                .addComponent(shareVitalInfoJRadioYes)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(shareVitalInfoJRadioNo)))))
-                .addContainerGap(362, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(shareVitalInfoJRadioYes)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(shareVitalInfoJRadioNo)
+                            .addComponent(hasCardiacRadioNo)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(getAlertFromHH, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(116, 116, 116)))
+                .addContainerGap(225, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(getAlertFromHH)
-                .addGap(26, 26, 26)
+                .addGap(22, 22, 22)
+                .addComponent(getAlertFromHH, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(shareVitalInfoJRadioYes)
                     .addComponent(shareVitalInfoJRadioNo)
@@ -317,12 +330,17 @@ public class ManageVitalSignJPanel extends javax.swing.JPanel {
                         .addComponent(hasCardiacRadioNo)))
                 .addGap(18, 18, 18)
                 .addComponent(vitalSignPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backJButton)
-                    .addComponent(cancelJBtn)
-                    .addComponent(submitVitalSignsJBtn))
-                .addGap(41, 41, 41))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(backJButton)
+                        .addGap(41, 41, 41))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(submitVitalSignsJBtn)
+                            .addComponent(cancelJBtn))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
     }// </editor-fold>//GEN-END:initComponents
 
