@@ -70,7 +70,7 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
         // map().addJMVListener(this);
        
         populateNetworkComboBox();
-        setBackground(new Color(182,201,233));
+        setBackground(new Color(220,71,96));
          
        
       //  mperpLabelName = new JLabel("Meters/Pixels: ");
