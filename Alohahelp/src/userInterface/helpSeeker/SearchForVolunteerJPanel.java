@@ -70,7 +70,7 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
         // map().addJMVListener(this);
        
         populateNetworkComboBox();
-        setBackground(new Color(182,201,233));
+        setBackground(new Color(220,71,96));
          
        
       //  mperpLabelName = new JLabel("Meters/Pixels: ");
@@ -339,8 +339,8 @@ public class SearchForVolunteerJPanel extends javax.swing.JPanel implements JMap
                             .addComponent(jLabel1)
                             .addComponent(manageEnt1, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(manageEnt2, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(368, 368, 368))
         );
         layout.setVerticalGroup(
