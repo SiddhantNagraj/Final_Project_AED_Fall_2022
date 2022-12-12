@@ -6,6 +6,7 @@
 package userInterface.volunteer;
 
 import business.orgapkg.OrgaDirect;
+import business.orgapkg.VolunteerOrga;
 import business.userAccountpkg.UserAc;
 import business.workQpkg.NeedHelpWorkReq;
 import business.workQpkg.WorkRequest;
@@ -29,15 +30,17 @@ public class ViewPersonalHelpRequestsJPanel extends javax.swing.JPanel {
     
    private JPanel userProcessContainer;
    private UserAc userAccount;  
+   private VolunteerOrga volunteerOrganization;
     private OrgaDirect od;
     /**
      * Creates new form ViewHelpRequests
      */
-    public ViewPersonalHelpRequestsJPanel(JPanel userProcessContainer, UserAc userAccount, OrgaDirect od) {
+    public ViewPersonalHelpRequestsJPanel(JPanel userProcessContainer, UserAc account, VolunteerOrga organization, OrgaDirect directory) {
         initComponents();
         
          this.userProcessContainer = userProcessContainer;
          this.userAccount = userAccount;
+        this.volunteerOrganization = organization;
          this.od = od;
          
          populatehelpRequestTable();
@@ -64,8 +67,8 @@ public class ViewPersonalHelpRequestsJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
          DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy"); 
         for(WorkRequest request : userAccount.getWorkQueue().getWorkRequestList()){
-          if(request.getMessage().equalsIgnoreCase("Need Help"))
-          {
+         // if(request.getMessage().equalsIgnoreCase("Need Help"))
+          //{
             Object[] row = new Object[4];
             row[0] = request;
             row[1] = request.getSender();
@@ -73,7 +76,7 @@ public class ViewPersonalHelpRequestsJPanel extends javax.swing.JPanel {
             row[3] = request.getStatus();
            
             model.addRow(row);
-          }
+        //  }
           if((request.getMessage().equals("Request for Approval")))
           {
             String msg = ("Your account is approved by").concat(request.getReceiver().getPerson().getName());
